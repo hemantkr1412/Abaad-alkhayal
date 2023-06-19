@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contactDiv {
+    /* border: 2px solid red; */
+    background: #F1F6FA;
+    padding: 4rem !important;
+}
+
+.contactType {
+    color: #9497A1;
+
+}
+
+.contactInfo {
+    font-weight: bold;
+}
+
+.formOuterDiv {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+}
+
+.formDiv {
+    /* border: 2px solid red; */
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background: white;
+    padding-top: 2rem;
+}
+
+.inputDiv {
+    margin: 1rem 1rem 1rem 2.5rem !important;
+}
+
+.inputLabel {
+    color: #9497A1;
+}

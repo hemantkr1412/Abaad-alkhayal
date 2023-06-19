@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.teamDiv {
+    /* border: 2px solid red; */
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F1F6FA;
+}

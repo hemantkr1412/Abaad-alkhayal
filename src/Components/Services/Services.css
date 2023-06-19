@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.serviceDiv {
+    /* border: 2px solid red; */
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F1F6FA;
+    margin-bottom: 1.5rem;
+}
