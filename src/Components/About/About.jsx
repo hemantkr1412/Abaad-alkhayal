@@ -3,8 +3,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Card, CardMedia } from '@mui/material';
-import about1 from './assets/about1.png'
-import about2 from './assets/about2.png'
+import aboutImg1 from './assets/about1.png';
+import aboutImg2 from './assets/about2.png';
 import './About.css'
 
 const About = () => {
@@ -17,7 +17,7 @@ const About = () => {
 
     return (
         <>
-            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" sx={{ background: '#185CFF', color: 'white', p: 3, marginTop: '1rem' }}>
+            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" id="about" sx={{ background: '#185CFF', color: 'white', p: 3, marginTop: '1rem' }}>
                 <Grid item xs={2}></Grid>
                 {
                     record.map((elem, id) => {
@@ -51,11 +51,11 @@ const About = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ ml: 5 }}>
                         <CardMedia
                             component="img"
-                            height="100%" // Adjust the height as needed
-                            image={about1} // Provide the path or URL to your image
+                            height="100%"
+                            image={aboutImg1}
                             alt="Image Alt Text"
                         />
                     </Card>
@@ -72,13 +72,13 @@ const About = () => {
                         <CardMedia
                             component="img"
                             height="100%" // Adjust the height as needed
-                            image={about1} // Provide the path or URL to your image
+                            image={aboutImg2} // Provide the path or URL to your image
                             alt="Image Alt Text"
                         />
                     </Card>
                 </Grid>
                 <Grid item xs={4}>
-                    <Box sx={{ textAlign: 'start' }}>
+                    <Box sx={{ textAlign: 'start', ml: 5 }}>
                         <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
                             Our Mission
                         </Typography>
@@ -89,9 +89,8 @@ const About = () => {
                 </Grid>
                 <Grid item xs={2}></Grid>
             </Grid>
-
         </>
     )
 }
 
-export default About
+export default About;

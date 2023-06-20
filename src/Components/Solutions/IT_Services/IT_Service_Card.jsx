@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
-import './Services.css'
+import './IT_Services.css';
 import { styled } from '@mui/system';
 import { css } from '@emotion/react';
 
@@ -13,9 +13,8 @@ const CardMediaWrapper = styled(CardMedia)(({ theme }) => css`
   max-width: 100px
 `);
 
-export default function ServiceCard(props) {
-    // const classes = useStyles();
-    console.log(props);
+export default function IT_Service_Card(props) {
+    // console.log(props);
 
     return (
         <Card sx={{
@@ -27,7 +26,6 @@ export default function ServiceCard(props) {
             boxShadow: '0px 4px 12px rgba(12, 68, 204, 0.1)',
             borderRadius: '6px'
         }}>
-            {/* <CardActionArea sx={{ border: '2px solid red' }}> */}
             <CardMediaWrapper
                 component="img"
                 height="40"
@@ -40,7 +38,6 @@ export default function ServiceCard(props) {
                     mb: 3,
                     objectFit: 'contain'
                 }}
-            // className={classes.cardMedia}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }}>
@@ -50,7 +47,6 @@ export default function ServiceCard(props) {
                     {props.desc}
                 </Typography>
             </CardContent>
-            {/* </CardActionArea> */}
             <CardActions sx={{ display: 'inline', mx: 'auto', fontWeight: 'medium' }}>
                 <Button variant="text" size='small' endIcon={<EastIcon />} sx={{ color: '#185CFF' }}>
                     Read more

@@ -4,12 +4,16 @@
     box-sizing: border-box;
 }
 
+#itservices {
+    /* background-color: red; */
+    height: 6rem;
+}
+
 .serviceDiv {
     /* border: 2px solid red; */
-    padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #F1F6FA;
-    margin-bottom: 1.5rem;
+    padding-top: 2rem;
 }

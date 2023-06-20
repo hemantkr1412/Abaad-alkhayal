@@ -7,9 +7,26 @@
 .navbarTitle {
     width: auto;
     max-width: 150px;
-    /* Adjust the value as needed */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     color: 'black';
+}
+
+.navbarLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdownLinks {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    margin: 0.5rem 0;
+    padding: 4px 10px;
+}
+
+.dropdownLinks:hover {
+    background: rgb(244, 244, 244)
 }

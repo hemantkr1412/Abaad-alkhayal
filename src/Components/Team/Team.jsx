@@ -1,15 +1,15 @@
 import React from 'react';
-import TeamCard from './TeamCard.jsx'
-import { TeamMembers } from './TeamMembers.jsx'
+import TeamCard from './TeamCard.jsx';
+import { TeamMembers } from './TeamMembers.jsx';
 import Grid from '@mui/material/Grid';
-import './Team.css'
-import Paper from '@mui/material/Paper';
+import './Team.css';
 
 const Team = () => {
     return (
         <>
+            <div id="team"></div>
             <div className='teamDiv'>
-                <h1 style={{ textAlign: 'center' }}>Get to know us closer</h1>
+                <h1 style={{ textAlign: 'center' }} id="team">Get to know us closer</h1>
                 <p style={{
                     marginBottom: '3rem',
                     textAlign: "center"
@@ -36,4 +36,4 @@ const Team = () => {
     )
 }
 
-export default Team
+export default Team;

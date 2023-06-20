@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+#team {
+    /* border: 2px solid red; */
+    height: 6rem;
+    background: #F1F6FA;
+}
+
 .teamDiv {
     /* border: 2px solid red; */
-    padding: 4rem;
+    padding: 0 4rem 4rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;

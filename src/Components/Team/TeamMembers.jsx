@@ -1,9 +1,9 @@
-import team_member_1 from './assets/team_member_1.png'
-import team_member_2 from './assets/team_member_2.png'
-import team_member_3 from './assets/team_member_3.png'
-import team_member_4 from './assets/team_member_4.png'
-import team_member_5 from './assets/team_member_5.png'
-import team_member_6 from './assets/team_member_6.png'
+import team_member_1 from './assets/team_member_1.png';
+import team_member_2 from './assets/team_member_2.png';
+import team_member_3 from './assets/team_member_3.png';
+import team_member_4 from './assets/team_member_4.png';
+import team_member_5 from './assets/team_member_5.png';
+import team_member_6 from './assets/team_member_6.png';
 
 export const TeamMembers = [
     {
@@ -42,5 +42,4 @@ export const TeamMembers = [
         name: 'Eva Vosgi',
         designation: 'Data scientist'
     },
-
 ];

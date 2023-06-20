@@ -5,9 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import team_member_1 from './assets/team_member_1.png'
+import team_member_1 from './assets/team_member_1.png';
 
-export default function ImgMediaCard(props) {
+export default function TeamCard(props) {
     return (
         <Card sx={{
             maxWidth: 345,
@@ -28,10 +28,6 @@ export default function ImgMediaCard(props) {
                     {props.designation}
                 </Typography>
             </CardContent>
-            {/* <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
-            </CardActions> */}
         </Card>
     );
 }

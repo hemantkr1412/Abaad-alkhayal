@@ -4,19 +4,30 @@
     box-sizing: border-box;
 }
 
+#contact {
+    /* border: 2px solid red; */
+    height: 6rem;
+    background: #F1F6FA;
+}
+
 .contactDiv {
     /* border: 2px solid red; */
     background: #F1F6FA;
-    padding: 4rem !important;
+    padding: 1rem 4rem 4rem 4rem !important;
 }
 
 .contactType {
     color: #9497A1;
-
 }
 
 .contactInfo {
     font-weight: bold;
+}
+
+.contactLink {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
 .formOuterDiv {
@@ -31,6 +42,9 @@
     margin: auto;
     background: white;
     padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .inputDiv {
@@ -39,4 +53,10 @@
 
 .inputLabel {
     color: #9497A1;
+}
+
+.formBtn {
+    width: 6rem;
+    color: white !important;
+    margin-left: auto !important;
 }
