@@ -17,7 +17,6 @@ const Contact = () => {
                 display: { xs: 'block', md: 'none' },
                 fontWeight: 'bold',
                 textAlign: 'center',
-                // marginBottom: '5rem',
                 fontSize: '2rem',
                 background: '#F1F6FA'
             }} id="contactHead">
@@ -25,7 +24,7 @@ const Contact = () => {
             </Typography>
             <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" sx={{ p: 3 }} className="contactDiv">
                 <Grid item xs={1} sx={{ display: { xs: 'none', lg: 'block' } }}></Grid>
-                <Grid item xs={12} sm={6} sx={{ p: 5 }}>
+                <Grid item xs={12} sm={6} sx={{ p: 5 }} id="contactContainer">
                     <Box sx={{ textAlign: 'start' }}>
 
                         <Typography variant="h4" gutterBottom sx={{

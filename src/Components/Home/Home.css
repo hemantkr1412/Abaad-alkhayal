@@ -30,6 +30,12 @@
     }
 }
 
+@media only screen and (max-width : 500px) {
+    #about {
+        height: 5rem !important;
+    }
+}
+
 @media only screen and (min-width : 600px) and (max-width : 992px) {
     .homeHead {
         font-size: 2.5rem !important;

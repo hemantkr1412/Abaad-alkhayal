@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import home from './assets/home.png'
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import './Home.css'
 
 const Home = () => {
@@ -66,6 +65,7 @@ const Home = () => {
                 </Grid>
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
             </Grid >
+            <div id="about" style={{ height: '2rem' }}></div>
         </>
     )
 }
