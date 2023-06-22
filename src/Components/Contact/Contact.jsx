@@ -12,23 +12,32 @@ const Contact = () => {
     return (
         <>
             <div id="contact"></div>
+            <Typography variant="h5" gutterBottom sx={{
+                // border: '2px solid red',
+                display: { xs: 'block', md: 'none' },
+                fontWeight: 'bold',
+                textAlign: 'center',
+                // marginBottom: '5rem',
+                fontSize: '2rem',
+                background: '#F1F6FA'
+            }} id="contactHead">
+                Feel free to reach out for further details
+            </Typography>
             <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" sx={{ p: 3 }} className="contactDiv">
-                <Grid item xs={1}></Grid>
-                <Grid item xs={6} sx={{ p: 5 }}>
+                <Grid item xs={1} sx={{ display: { xs: 'none', lg: 'block' } }}></Grid>
+                <Grid item xs={12} sm={6} sx={{ p: 5 }}>
                     <Box sx={{ textAlign: 'start' }}>
-                        <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
-                            Left questions? Contacts us now for a free consultation and free trial!
+
+                        <Typography variant="h4" gutterBottom sx={{
+                            fontWeight: 'bold',
+                            display: { xs: 'none', md: 'block' }
+                        }}>
+                            Feel free to reach out for further details
                         </Typography>
-                        <Typography sx={{ typography: 'body1', lineHeight: 1.8, mb: 5 }} gutterBottom className='contactType'>
-                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.
-                        </Typography>
+
                         <Box sx={{ mt: 4 }}>
                             <p className='contactType'>Email address</p>
                             <a href="mailto: support@beimagine.tech" className="contactLink">support@beimagine.tech</a>
-                        </Box>
-                        <Box sx={{ mt: 4 }}>
-                            <p className='contactType'>Phone number</p>
-                            <p className='contactInfo'>+1601-201-5580</p>
                         </Box>
                         <Box sx={{ mt: 4 }}>
                             <p className='contactType'>Address</p>
@@ -38,7 +47,7 @@ const Contact = () => {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={4} className="formOuterDiv">
+                <Grid item xs={12} sm={6} md={5} lg={4} className="formOuterDiv">
                     <Box component="div" className="formDiv">
                         <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', marginLeft: '2rem', marginTop: '1rem' }} >
                             Contact Us
@@ -67,7 +76,7 @@ const Contact = () => {
                         <Button variant="contained" className="formBtn" sx={{ background: '#185CFF', margin: '1rem 2rem 0 0' }}>Send</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={1}></Grid>
+                <Grid item xs={1} sx={{ display: { xs: 'none', lg: 'block' } }}></Grid>
             </Grid>
         </>
     )

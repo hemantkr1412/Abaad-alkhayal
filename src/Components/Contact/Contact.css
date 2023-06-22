@@ -41,7 +41,7 @@
     height: 100%;
     margin: auto;
     background: white;
-    padding-top: 2rem;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -59,4 +59,35 @@
     width: 6rem;
     color: white !important;
     margin-left: auto !important;
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width : 600px) {
+    #contactHead {
+        font-size: 1.8rem;
+    }
+
+    #contactContainer {
+        padding: 0 !important;
+    }
+
+    .formDiv {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 900px) {
+    .contactDiv {
+        padding: 0rem 0rem 0rem 2rem !important;
+    }
+
+    .contactDiv {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    .formDiv {
+        width: 90%;
+    }
 }

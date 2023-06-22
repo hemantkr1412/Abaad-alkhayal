@@ -10,8 +10,7 @@
     background: #F1F6FA;
 }
 
-.linksContainer {
-    /* border: 2px solid red; */
+/* .linksContainer {
     padding: 0;
 }
 
@@ -27,19 +26,34 @@
     text-decoration: none;
     font-size: 14px;
     margin: 8px 0;
-}
+} 
 
 .footerLink {
     font-weight: bold;
     text-decoration: none;
     color: black;
-}
+} */
 
 .footerIcons {
     border-radius: 50%;
     /* color: white; */
     color: #185CFF;
-    margin: 0 0 0 1.5rem;
-    transform: scale(1.1);
+    margin: 0 0 0 2.5rem;
+    transform: scale(1.4);
     cursor: pointer;
+}
+
+@media only screen and (max-width : 600px) {
+    .footerDiv {
+        padding: 0 !important;
+    }
+
+    #footerLogo {
+        text-align: center !important;
+    }
+
+    #footerIcons {
+        text-align: center !important;
+        display: block !important;
+    }
 }

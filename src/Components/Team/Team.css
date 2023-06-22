@@ -18,3 +18,35 @@
     align-items: center;
     background: #F1F6FA;
 }
+
+/* MEDIA QUERY */
+
+/* @media only screen and (min-width : 600px) and (max-width : 768px) {
+    .teamMemberName {
+        font-size: 1rem !important;
+    }
+
+    .memberDesignation {
+        font-size: .8rem !important;
+    }
+} */
+
+@media only screen and (max-width : 768px) {
+    .teamInfo {
+        width: 90% !important;
+    }
+
+    .teamMemberName {
+        font-size: 1rem !important;
+    }
+
+    .memberDesignation {
+        font-size: .8rem !important;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1200px) {
+    .teamInfo {
+        width: 70% !important;
+    }
+}

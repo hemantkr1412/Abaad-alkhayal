@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import team_member_1 from './assets/team_member_1.png';
+import './Team.css';
 
 export default function TeamCard(props) {
     return (
@@ -21,10 +22,10 @@ export default function TeamCard(props) {
                 image={props.img}
             />
             <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: 'bold' }}>
+                <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: 'bold' }} className="teamMemberName">
                     {props.name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" className="memberDesignation">
                     {props.designation}
                 </Typography>
             </CardContent>

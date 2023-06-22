@@ -20,3 +20,48 @@
     /* background-color: red; */
     height: 6rem;
 }
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width : 600px) {
+    .aboutImg {
+        width: 80% !important;
+        margin: auto;
+    }
+
+    .solutionHead {
+        font-size: 2.3rem !important;
+        margin: 0 !important;
+    }
+
+    .solution {
+        font-size: 2rem;
+    }
+
+    #bitsaudi,
+    #bitwallet {
+        height: 2rem;
+    }
+
+    .solutionInfo {
+        margin-bottom: 2rem !important;
+    }
+
+    .launchBtn {
+        display: block;
+        margin: auto;
+        width: 40%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+    #solutionImgContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    /* .solution {
+        font-size: 2.5rem;
+    } */
+}

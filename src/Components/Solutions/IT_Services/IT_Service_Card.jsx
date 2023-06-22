@@ -5,9 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
-import './IT_Services.css';
 import { styled } from '@mui/system';
 import { css } from '@emotion/react';
+import './IT_Services.css';
 
 const CardMediaWrapper = styled(CardMedia)(({ theme }) => css`
   max-width: 100px
@@ -22,10 +22,11 @@ export default function IT_Service_Card(props) {
             height: '100%',
             // border: '2px solid red',
             textAlign: 'center',
-            padding: '2rem',
+            padding: '1rem',
             boxShadow: '0px 4px 12px rgba(12, 68, 204, 0.1)',
-            borderRadius: '6px'
-        }}>
+            borderRadius: '6px',
+            margin: 'auto'
+        }} className="serviceCard">
             <CardMediaWrapper
                 component="img"
                 height="40"
@@ -47,11 +48,11 @@ export default function IT_Service_Card(props) {
                     {props.desc}
                 </Typography>
             </CardContent>
-            <CardActions sx={{ display: 'inline', mx: 'auto', fontWeight: 'medium' }}>
+            {/* <CardActions sx={{ display: 'inline', mx: 'auto', fontWeight: 'medium' }}>
                 <Button variant="text" size='small' endIcon={<EastIcon />} sx={{ color: '#185CFF' }}>
                     Read more
                 </Button>
-            </CardActions>
+            </CardActions> */}
         </Card >
     );
 }

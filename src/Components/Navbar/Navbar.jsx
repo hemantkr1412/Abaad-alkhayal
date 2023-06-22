@@ -37,36 +37,17 @@ export default function Navbar() {
     };
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
+        setMobileOpen(true); // Open the mobile drawer when the menu opens
     };
 
     const handleMenuClose = () => {
         setAnchorEl(null);
-    };
-    const handleMenuMouseEnter = () => {
-        setMobileOpen(true);
+        setMobileOpen(false); // Close the mobile drawer when the menu closes
     };
 
-    const handleMenuMouseLeave = () => {
-        setMobileOpen(false);
-    };
-
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
-            </Typography>
-            <Divider />
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Box>
-    );
+    // document.body.addEventListener('click', () => {
+    //     setMobileOpen(false);
+    // })
 
     const renderDropdownMenu = (
         <Menu
@@ -84,9 +65,8 @@ export default function Navbar() {
                 top: '60px',
                 left: '15px',
             }}
+            getContentAnchorEl={null}
             onClose={handleMenuClose}
-            onMouseEnter={handleMenuMouseEnter}
-            // onMouseLeave={handleMenuMouseLeave}
             sx={{
                 // border: '2px solid red',
                 zIndex: '100',
@@ -102,6 +82,48 @@ export default function Navbar() {
             <a href="#bitwallet" onClick={handleMenuClose} className="dropdownLinks">BitWallet</a>
             <a href="#itservices" onClick={handleMenuClose} className="dropdownLinks">IT Services</a>
         </Menu>
+    );
+
+    const drawer = (
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+            <Typography variant="h6" sx={{ my: 2 }}>
+                <img src={logo} alt="" style={{
+                    height: '5rem',
+                    marginTop: '.5rem',
+                }} />
+            </Typography>
+            <Divider />
+            <List>
+                {navItems.map((item) => (
+                    <ListItem key={item} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }}
+                            onMouseEnter={handleMenuOpen}
+                            onMouseLeave={handleMenuClose}
+                        >
+                            < div key={item} >
+                                {item === 'Solutions' ? (
+                                    <>
+                                        <a
+                                            href={`#${item.toLowerCase()}`}
+                                            className="navbarLinks"
+                                            onMouseEnter={handleMenuOpen}
+                                        // onMouseLeave={handleMenuClose}
+                                        >
+                                            {item}
+                                        </a>
+                                        {renderDropdownMenu}
+                                    </>
+                                ) : (
+                                    <a href={`#${item.toLowerCase()}`} className="navbarLinks">
+                                        {item}
+                                    </a>
+                                )}
+                            </div>
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box >
     );
 
     return (
@@ -120,14 +142,13 @@ export default function Navbar() {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { sm: 'none' } }}
+                            sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}
                         >
                             <MenuIcon />
                         </IconButton>
                         <Box sx={{
                             // border: '2px solid red',
-                            width: '80%',
-                            margin: 'auto',
+                            width: '100%',
                             display: 'flex',
                             justifyContent: "space-between",
                             alignItems: 'center'
@@ -135,43 +156,52 @@ export default function Navbar() {
                             <Typography
                                 variant="h6"
                                 component="div"
-                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                sx={{
+                                    display: { xs: 'none', sm: 'block' },
+                                    ml: { sm: 0, md: 4 },
+                                }}
                                 className='navbarTitle'
                             >
                                 <img src={logo} alt="" style={{
                                     height: '5rem',
-                                    marginTop: '.5rem'
+                                    marginTop: '.5rem',
                                 }} />
                             </Typography>
                             <Box xs={6} sx={{
                                 // border: '2px solid red',
                                 display: { xs: 'none', sm: 'block' },
-                                width: '60%',
-                                display: 'flex',
-                                justifyContent: 'space-evenly'
+                                width: { sm: '70%', md: '50%' },
                             }}>
-                                {navItems.map((item) => (
-                                    < div key={item} >
-                                        {item === 'Solutions' ? (
-                                            <a
-                                                href={`#${item.toLowerCase()}`}
-                                                className="navbarLinks"
-                                                onMouseEnter={handleMenuOpen}
-                                            // onMouseLeave={handleMenuClose}
-                                            >
-                                                {item}
-                                            </a>
-                                        ) : (
-                                            <a href={`#${item.toLowerCase()}`} className="navbarLinks">
-                                                {item}
-                                            </a>
-                                        )}
-                                    </div>
-                                ))}
+                                <Box sx={{
+                                    width: '100%', display: 'flex',
+                                    justifyContent: 'space-evenly'
+                                }}>
+                                    {navItems.map((item) => (
+                                        < div key={item} >
+                                            {item === 'Solutions' ? (
+                                                <>
+                                                    <a
+                                                        href={`#${item.toLowerCase()}`}
+                                                        className="navbarLinks"
+                                                        onMouseEnter={handleMenuOpen}
+                                                    // onMouseLeave={handleMenuClose}
+                                                    >
+                                                        {item}
+                                                    </a>
+                                                    {renderDropdownMenu}
+                                                </>
+                                            ) : (
+                                                <a href={`#${item.toLowerCase()}`} className="navbarLinks">
+                                                    {item}
+                                                </a>
+                                            )}
+                                        </div>
+                                    ))}
+                                </Box>
                             </Box>
-                            <Button variant="contained" startIcon={<PlayCircleOutlineIcon />} sx={{ textTransform: 'none', backgroundColor: '#185CFF' }}>
+                            {/* <Button variant="contained" startIcon={<PlayCircleOutlineIcon />} sx={{ textTransform: 'none', backgroundColor: '#185CFF' }}>
                                 Watch the demo
-                            </Button>
+                            </Button> */}
                         </Box>
                     </Toolbar>
                 </AppBar>
