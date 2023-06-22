@@ -30,9 +30,9 @@
     }
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 600px) {
     #about {
-        height: 5rem !important;
+        height: 10rem !important;
     }
 }
 

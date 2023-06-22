@@ -12,10 +12,11 @@ const BitSaudi = () => {
         <>
             <div id="bitsaudi"></div>
             <h1 style={{
+                // border: '2px solid red',
                 textAlign: 'center',
                 fontSize: '3rem',
-                marginTop: '1rem',
-                marginBottom: '3rem',
+                margin: '5rem 0',
+                // marginBottom: '5rem',
             }} className="solutionHead">Our Solutions</h1>
             <Grid container spacing={{ xs: 5, md: 3 }} justifyContent="center" className="mission">
                 <Grid item xs={12} sm={2} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
@@ -44,7 +45,7 @@ const BitSaudi = () => {
                             fontWeight: 'bold',
                             mb: 4,
                             display: { xs: 'none', sm: 'block' }
-                        }}>
+                        }} className="solution">
                             BitMemoir Saudi
                         </Typography>
                         <Typography sx={{ typography: 'body1', lineHeight: 1.8, textAlign: 'justify', marginBottom: '4rem' }} gutterBottom className='solutionInfo'>

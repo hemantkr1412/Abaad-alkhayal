@@ -12,7 +12,6 @@ const Home = () => {
             <Grid container spacing={2}
                 sx={{
                     // border: '2px solid red',
-                    marginBottom: '3rem',
                     height: { xs: '70vh', sm: '86vh' }
                 }}>
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>

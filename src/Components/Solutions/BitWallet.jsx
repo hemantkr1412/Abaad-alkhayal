@@ -38,7 +38,7 @@ const BitWallet = () => {
                             fontWeight: 'bold',
                             mb: 4,
                             display: { xs: 'none', sm: 'block' }
-                        }}>
+                        }} className='solution'>
                             BitWallet
                         </Typography>
                         <Typography sx={{ typography: 'body1', lineHeight: 1.8, textAlign: 'justify', marginBottom: '4rem' }} gutterBottom className='solutionInfo'>

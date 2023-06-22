@@ -38,7 +38,7 @@ export default function IT_Service_Card(props) {
                     objectFit: 'contain'
                 }}
             />
-            <CardContent>
+            <CardContent className='cardContent'>
                 <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }} className="serviceCardTitle">
                     {props.title}
                 </Typography>

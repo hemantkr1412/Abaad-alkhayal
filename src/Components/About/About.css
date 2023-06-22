@@ -8,36 +8,72 @@
     height: 0;
 }
 
-.mission {
+.missionImgContainer {
     /* border: 2px solid red; */
-    margin-top: 2rem !important;
+    height: 27rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
+.missionImg {
+    /* border: 2px solid red; */
+    height: 100%;
+}
+
+.missionBox {
+    padding: 4rem;
+}
+
+@media only screen and (max-width : 600px) {
+    .missionImgContainer {
+        height: 20rem;
+        width: 80%;
+        margin: auto;
+    }
+
+    .aboutHead {
+        font-size: 2.2rem !important;
+    }
+}
+
+
 @media only screen and (min-width : 600px) and (max-width : 768px) {
+    .missionImgContainer {
+        height: 20rem;
+    }
+
     .imgContainer {
         display: flex !important;
         align-items: center !important;
     }
 
     .aboutHead {
-        font-size: 2.5rem !important;
+        font-size: 2.4rem !important;
     }
 }
 
-@media only screen and (max-width : 1200px) {
+
+@media only screen and (max-width : 900px) {
     .missionBox {
         margin-left: 0 !important;
+        padding: 3rem 2rem
+    }
+}
+
+@media only screen and (min-width : 900px) and (max-width : 1200px) {
+    .missionBox {
+        margin-left: 0 !important;
+        padding: 3rem 0;
     }
 
     .aboutHead {
         font-size: 2.3rem !important;
-        margin-bottom: 0 !important;
-        margin-top: 3rem !important;
+        margin-bottom: 2rem !important;
     }
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (max-width : 400px) {
     #about {
-        height: 5rem;
+        height: 15rem !important;
     }
 }

@@ -16,7 +16,7 @@ const About = () => {
 
     return (
         <>
-            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" sx={{ p: 3 }} className="mission">
+            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" className="mission">
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
 
                 <Grid item xs={12} sm={6} md={5} className="imgContainer">
@@ -28,12 +28,13 @@ const About = () => {
                     }} className="aboutHead">
                         Our Mission
                     </Typography>
-                    <Card sx={{ boxShadow: 'none' }}>
+                    <Card sx={{ boxShadow: 'none' }} className="missionImgContainer">
                         <CardMedia
                             component="img"
-                            height="100%"
+                            // height="80%"
                             image={aboutImg2}
                             alt="Image Alt Text"
+                            className="missionImg"
                         />
                     </Card>
                 </Grid>
@@ -43,7 +44,7 @@ const About = () => {
                         <Typography variant="h3" gutterBottom sx={{
                             fontWeight: 'bold', mb: 4,
                             display: { xs: 'none', sm: 'block' }
-                        }}>
+                        }} className="aboutHead">
                             Our Mission
                         </Typography>
                         <Typography
