@@ -21,40 +21,24 @@
 /* MEDIA QUERY */
 
 @media only screen and (max-width : 600px) {
-
     .serviceCardContainerDiv {
         padding: 0 1rem 0 2.5rem !important;
     }
 
-    /* .serviceCardContainer {
-        border: 2px solid red;
-        margin: auto;
-    } */
-
-    /* .serviceCard {
-        padding: 0 !important;
-    } */
-}
-
-/* @media only screen and (min-width : 992px) and (max-width : 1200px) {
     .serviceCard {
-        margin: auto !important;
+        padding: 0 !important;
+        padding-top: 1rem !important;
     }
-} */
+
+    .serviceCardTitle {
+        font-size: 1.2rem !important;
+    }
+}
 
 @media only screen and (min-width : 992px) and (max-width : 1200px) {
     .serviceCardContainerDiv {
         padding: 0 1rem 0 2.5rem !important;
     }
-
-    /* .serviceCardContainer {
-        margin: auto;
-    }
-
-    .serviceCard {
-        padding: 1rem 0 !important;
-        margin: auto !important;
-    } */
 }
 
 @media only screen and (max-width : 768px) {

@@ -7,13 +7,10 @@ import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../../../public/logo.png';
@@ -37,17 +34,13 @@ export default function Navbar() {
     };
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
-        setMobileOpen(true); // Open the mobile drawer when the menu opens
+        setMobileOpen(true);
     };
 
     const handleMenuClose = () => {
         setAnchorEl(null);
-        setMobileOpen(false); // Close the mobile drawer when the menu closes
+        setMobileOpen(false);
     };
-
-    // document.body.addEventListener('click', () => {
-    //     setMobileOpen(false);
-    // })
 
     const renderDropdownMenu = (
         <Menu
@@ -96,30 +89,27 @@ export default function Navbar() {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}
-                            onMouseEnter={handleMenuOpen}
-                            onMouseLeave={handleMenuClose}
-                        >
-                            < div key={item} >
-                                {item === 'Solutions' ? (
-                                    <>
-                                        <a
-                                            href={`#${item.toLowerCase()}`}
-                                            className="navbarLinks"
-                                            onMouseEnter={handleMenuOpen}
-                                        // onMouseLeave={handleMenuClose}
-                                        >
-                                            {item}
-                                        </a>
-                                        {renderDropdownMenu}
-                                    </>
-                                ) : (
-                                    <a href={`#${item.toLowerCase()}`} className="navbarLinks">
+                        < div key={item} style={{
+                            padding: '10px',
+                            margin: 'auto',
+                        }}>
+                            {item === 'Solutions' ? (
+                                <>
+                                    <a
+                                        href={`#${item.toLowerCase()}`}
+                                        className="navbarLinks"
+                                        onMouseEnter={handleMenuOpen}
+                                    // onMouseLeave={handleMenuClose}
+                                    >
                                         {item}
                                     </a>
-                                )}
-                            </div>
-                        </ListItemButton>
+                                </>
+                            ) : (
+                                <a href={`#${item.toLowerCase()}`} className="navbarLinks">
+                                    {item}
+                                </a>
+                            )}
+                        </div>
                     </ListItem>
                 ))}
             </List>
@@ -188,7 +178,6 @@ export default function Navbar() {
                                                     >
                                                         {item}
                                                     </a>
-                                                    {renderDropdownMenu}
                                                 </>
                                             ) : (
                                                 <a href={`#${item.toLowerCase()}`} className="navbarLinks">
@@ -199,9 +188,6 @@ export default function Navbar() {
                                     ))}
                                 </Box>
                             </Box>
-                            {/* <Button variant="contained" startIcon={<PlayCircleOutlineIcon />} sx={{ textTransform: 'none', backgroundColor: '#185CFF' }}>
-                                Watch the demo
-                            </Button> */}
                         </Box>
                     </Toolbar>
                 </AppBar>

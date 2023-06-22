@@ -3,8 +3,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActions } from '@mui/material';
-import EastIcon from '@mui/icons-material/East';
 import { styled } from '@mui/system';
 import { css } from '@emotion/react';
 import './IT_Services.css';
@@ -41,18 +39,13 @@ export default function IT_Service_Card(props) {
                 }}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '22px', fontWeight: 'medium' }} className="serviceCardTitle">
                     {props.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                     {props.desc}
                 </Typography>
             </CardContent>
-            {/* <CardActions sx={{ display: 'inline', mx: 'auto', fontWeight: 'medium' }}>
-                <Button variant="text" size='small' endIcon={<EastIcon />} sx={{ color: '#185CFF' }}>
-                    Read more
-                </Button>
-            </CardActions> */}
         </Card >
     );
 }

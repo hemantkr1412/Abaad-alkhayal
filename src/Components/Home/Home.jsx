@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import home from './assets/home.png'
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import './Home.css'
 
 const Home = () => {
@@ -29,12 +28,9 @@ const Home = () => {
                         display: { xs: 'block', sm: 'none' },
                         '@media (max-width: 900px)': { xs: 6 }
                     }}>
-                    {/* <img src={home} alt=""  }} /> */}
                 </Grid>
                 <Grid item xs={12} sm={6} md={5}
                     sx={{
-                        // height: '100%',
-                        // border: '2px solid blue',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',

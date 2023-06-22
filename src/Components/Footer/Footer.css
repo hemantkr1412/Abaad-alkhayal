@@ -10,33 +10,8 @@
     background: #F1F6FA;
 }
 
-/* .linksContainer {
-    padding: 0;
-}
-
-.linksContainer p {
-    color: black;
-    font-weight: bold;
-}
-
-.footerBtn {
-    text-transform: none !important;
-    display: block !important;
-    color: black !important;
-    text-decoration: none;
-    font-size: 14px;
-    margin: 8px 0;
-} 
-
-.footerLink {
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-} */
-
 .footerIcons {
     border-radius: 50%;
-    /* color: white; */
     color: #185CFF;
     margin: 0 0 0 2.5rem;
     transform: scale(1.4);
