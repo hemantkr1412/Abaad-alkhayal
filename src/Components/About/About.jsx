@@ -16,7 +16,8 @@ const About = () => {
 
     return (
         <>
-            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" sx={{ p: 3 }} className="mission" id="about">
+            <div id="about"></div>
+            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" sx={{ p: 3 }} className="mission">
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
 
                 <Grid item xs={12} sm={6} md={5} className="imgContainer">

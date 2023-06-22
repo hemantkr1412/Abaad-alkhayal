@@ -4,25 +4,9 @@
     box-sizing: border-box;
 }
 
-/* RECORD */
-
-.record {
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+#about {
+    height: 0;
 }
-
-/* WHO WE ARE */
-
-.whoWeAre {
-    /* border: 2px solid red; */
-    margin-top: 4rem !important;
-}
-
-/* OUR MISSION */
 
 .mission {
     /* border: 2px solid red; */
@@ -50,5 +34,10 @@
         margin-bottom: 0 !important;
         margin-top: 3rem !important;
     }
+}
 
+@media only screen and (max-width : 500px) {
+    #about {
+        height: 5rem;
+    }
 }
