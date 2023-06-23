@@ -24,7 +24,7 @@ const IT_Services = () => {
                         {
                             IT_Service_Card_Data.map((data, id) => {
                                 return (
-                                    <Grid item xs={6} md={4} className="serviceCardContainer">
+                                    <Grid item xs={6} md={4} className="serviceCardContainer" key={id}>
                                         <IT_Service_Card key={id} title={data.title} desc={data.desc} img={data.img} />
                                     </Grid>
                                 )

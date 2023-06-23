@@ -6,8 +6,8 @@
 
 #itservices {
     /* background-color: red; */
-    height: 6rem;
-    margin-top: -3rem;
+    height: 4rem;
+    margin-top: -2rem;
 }
 
 .serviceDiv {
@@ -22,12 +22,6 @@
 /* MEDIA QUERY */
 
 @media only screen and (max-width : 600px) {
-    .cardContent {
-        padding: 5px !important;
-    }
-}
-
-@media only screen and (max-width : 600px) {
     .serviceCardContainerDiv {
         padding: 0 1rem 0 2.5rem !important;
     }
@@ -40,6 +34,10 @@
     .serviceCardTitle {
         font-size: 1.1rem !important;
     }
+
+    #itservices {
+        height: 5rem;
+    }
 }
 
 
@@ -47,11 +45,19 @@
     .serviceDesc {
         width: 90% !important;
     }
+
+    #itservices {
+        height: 5rem !important;
+    }
 }
 
 @media only screen and (min-width : 768px) and (max-width : 1200px) {
     .serviceDesc {
         width: 70% !important;
+    }
+
+    #itservices {
+        height: 5rem !important;
     }
 }
 

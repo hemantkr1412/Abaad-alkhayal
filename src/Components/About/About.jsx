@@ -7,13 +7,6 @@ import aboutImg2 from './assets/about3.png';
 import './About.css'
 
 const About = () => {
-    const record = [
-        { field: 'Project executed', data: '1830+' },
-        { field: ' Data analytics', data: 220 },
-        { field: 'Data management', data: 390 },
-        { field: 'Satisfied customers', data: '834+' },
-    ]
-
     return (
         <>
             <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" className="mission">
@@ -58,7 +51,6 @@ const About = () => {
                         </Typography>
                     </Box>
                 </Grid>
-
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
             </Grid>
         </>

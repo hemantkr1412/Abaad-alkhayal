@@ -9,6 +9,12 @@
     height: 6rem;
 }
 
+#about {
+    /* border: 2px solid red; */
+    height: 6rem !important;
+    margin-top: -6rem !important;
+}
+
 /* MEDIA QUERY */
 
 @media only screen and (max-width : 600px) {
@@ -28,11 +34,10 @@
     .homeDesc {
         font-size: 1rem !important;
     }
-}
 
-@media only screen and (max-width : 600px) {
     #about {
         height: 10rem !important;
+        margin-top: 1rem !important;
     }
 }
 
@@ -43,5 +48,16 @@
 
     .homeDesc {
         font-size: 1rem !important;
+    }
+
+    #about {
+        height: 4rem !important;
+        margin-top: -6rem !important;
+    }
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1200px) {
+    #about {
+        margin-top: -8rem !important;
     }
 }

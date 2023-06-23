@@ -24,7 +24,7 @@ const Home = () => {
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'block', sm: 'none' },
-                        '@media (max-width: 900px)': { xs: 6 }
+                        '@media (maxWidth: 900px)': { xs: 6 }
                     }}>
                 </Grid>
                 <Grid item xs={12} sm={6} md={5}
@@ -33,7 +33,7 @@ const Home = () => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        '@media (max-width: 900px)': { xs: 6 }
+                        '@media (maxWidth: 900px)': { xs: 6 }
                     }}>
                     <Box sx={{ width: '77%', textAlign: 'start' }} className="homeTextBox">
                         <Typography variant="h3" gutterBottom className="homeHead" sx={{
@@ -58,13 +58,12 @@ const Home = () => {
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'none', sm: 'block' },
-                        '@media (max-width: 900px)': { xs: 6 }
+                        '@media (maxWidth: 900px)': { xs: 6 }
                     }}>
-                    {/* <img src={home} alt=""  }} /> */}
                 </Grid>
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
             </Grid >
-            <div id="about" style={{ height: '2rem' }}></div>
+            <div id="about"></div>
         </>
     )
 }

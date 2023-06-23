@@ -9,6 +9,13 @@ import Button from '@mui/material/Button';
 import './Contact.css'
 
 const Contact = () => {
+    const formDetail = [
+        { label: 'Name', placeholder: "Andrea" },
+        { label: 'Email', placeholder: "andrea@gmail.com" },
+        { label: 'Theme', placeholder: "Job" },
+        { label: 'Message', placeholder: "Your message" }
+    ]
+
     return (
         <>
             <div id="contact"></div>
@@ -51,27 +58,16 @@ const Contact = () => {
                         <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', marginLeft: '2rem', marginTop: '1rem' }} >
                             Contact Us
                         </Typography>
-
-                        <FormControl variant="standard" className='inputDiv'>
-                            <InputLabel htmlFor="component-simple" className="inputLabel">Name</InputLabel>
-                            <Input id="component-simple" defaultValue="Andrea" className='input' />
-                        </FormControl>
-
-                        <FormControl variant="standard" className='inputDiv'>
-                            <InputLabel htmlFor="component-simple" className="inputLabel">Email</InputLabel>
-                            <Input id="component-simple" defaultValue="andrea@gmail.com" className='input' />
-                        </FormControl>
-
-                        <FormControl variant="standard" className='inputDiv'>
-                            <InputLabel htmlFor="component-simple" className="inputLabel">Theme</InputLabel>
-                            <Input id="component-simple" defaultValue="Job" className='input' />
-                        </FormControl>
-
-                        <FormControl variant="standard" className='inputDiv'>
-                            <InputLabel htmlFor="component-simple" className="inputLabel">Message</InputLabel>
-                            <Input id="component-simple" defaultValue="Your message" className='input' />
-                        </FormControl>
-
+                        {
+                            formDetail.map((elem, id) => {
+                                return (
+                                    <FormControl variant="standard" className='inputDiv' key={id}>
+                                        <InputLabel htmlFor="component-simple" className="inputLabel">{elem.label}</InputLabel>
+                                        <Input id="component-simple" defaultValue={elem.placeholder} className='input' />
+                                    </FormControl>
+                                )
+                            })
+                        }
                         <Button variant="contained" className="formBtn" sx={{ background: '#185CFF', margin: '1rem 2rem 0 0' }}>Send</Button>
                     </Box>
                 </Grid>

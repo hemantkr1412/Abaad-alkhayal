@@ -24,8 +24,8 @@ const Team = () => {
                         {
                             TeamMembers.map((member, id) => {
                                 return (
-                                    <Grid item xs={6} sm={4}>
-                                        <TeamCard key={id} img={member.img} name={member.name} designation={member.designation} />
+                                    <Grid item xs={6} sm={4} key={id}>
+                                        <TeamCard img={member.img} name={member.name} designation={member.designation} />
                                     </Grid>
                                 )
                             })

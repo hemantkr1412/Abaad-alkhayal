@@ -22,13 +22,13 @@ const BitWallet = () => {
                     }} className="solution">
                         BitWallet
                     </Typography>
-                    <Card sx={{ boxShadow: 'none' }}>
+                    <Card sx={{ boxShadow: 'none' }} className="solutionImgContainer">
                         <CardMedia
                             component="img"
                             height="90%"
                             image={BitwalletImg}
                             alt="Image Alt Text"
-                            className='aboutImg'
+                            className='solutionImg'
                         />
                     </Card>
                 </Grid>

@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import TelegramIcon from '@mui/icons-material/Telegram';
 import './Footer.css';
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
                         <FacebookRoundedIcon sx={{ color: '#185CFF', transform: 'scale(1.4)', cursor: 'pointer' }} />
                         <TwitterIcon className="footerIcons" />
                         <LinkedInIcon className="footerIcons" />
-                        <YouTubeIcon className="footerIcons" />
+                        <TelegramIcon className="footerIcons" />
                     </Box>
                 </Grid>
                 <Grid item xs={1}></Grid>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,11 +10,9 @@ import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import logo from '../../../public/logo.png';
 import '../Navbar/Navbar.css'
+import Dropdown from './Dropdown';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Solutions', 'Team', 'Contact'];
@@ -23,6 +21,7 @@ export default function Navbar() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const [scroll, setScroll] = useState(false);
+    const [isMouseEnter, setIsMouseEnter] = useState(false);
 
     const scrolling = () => {
         (window.scrollY >= 2) ? setScroll(true) : setScroll(false);
@@ -31,54 +30,22 @@ export default function Navbar() {
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
-    };
-    const handleMenuOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-        setMobileOpen(true);
+        if (isMouseEnter)
+            setIsMouseEnter(false)
     };
 
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-        setMobileOpen(false);
-    };
-
-    const renderDropdownMenu = (
-        <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-                top: '60px',
-                left: '15px',
-            }}
-            transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-                top: '60px',
-                left: '15px',
-            }}
-            getContentAnchorEl={null}
-            onClose={handleMenuClose}
-            sx={{
-                // border: '2px solid red',
-                zIndex: '100',
-                marginTop: '1rem',
-                padding: '2rem'
-            }}
-        >
-            {/* <MenuItem onClick={handleMenuClose} component={Link} to="#bitSaudi">BitSaudi</MenuItem>
-            <MenuItem onClick={handleMenuClose} component={Link} to="#bitWallet">BitWallet</MenuItem>
-            <MenuItem onClick={handleMenuClose} component={Link} to="#itservices">IT Services</MenuItem> */}
-
-            <a href="#bitsaudi" onClick={handleMenuClose} className="dropdownLinks">BitSaudi</a>
-            <a href="#bitwallet" onClick={handleMenuClose} className="dropdownLinks">BitWallet</a>
-            <a href="#itservices" onClick={handleMenuClose} className="dropdownLinks">IT Services</a>
-        </Menu>
-    );
+    const handleMouseEnter = () => {
+        console.log(`mouse enters`);
+        setIsMouseEnter(true)
+    }
+    const handleMouseLeave = () => {
+        console.log(`mouse leaves`);
+        setIsMouseEnter(false)
+        setMobileOpen(false)
+    }
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: 'center', zIndex: '20' }} id="sidebar">
             <Typography variant="h6" sx={{ my: 2 }}>
                 <img src={logo} alt="" style={{
                     height: '5rem',
@@ -89,23 +56,22 @@ export default function Navbar() {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        < div key={item} style={{
+                        <div style={{
                             padding: '10px',
                             margin: 'auto',
                         }}>
                             {item === 'Solutions' ? (
                                 <>
-                                    <a
-                                        href={`#${item.toLowerCase()}`}
-                                        className="navbarLinks"
-                                        onMouseEnter={handleMenuOpen}
-                                    // onMouseLeave={handleMenuClose}
-                                    >
-                                        {item}
-                                    </a>
+                                    <div style={{ position: 'relative' }}>
+                                        <a className="navbarLinks" onClick={handleMouseEnter}>
+                                            {item}
+                                        </a>
+                                        {isMouseEnter && <Dropdown handleMouseLeave={handleMouseLeave} setMobileOpen={setMobileOpen} />}
+                                        {/* <Dropdown /> */}
+                                    </div>
                                 </>
                             ) : (
-                                <a href={`#${item.toLowerCase()}`} className="navbarLinks">
+                                <a href={`#${item.toLowerCase()}`} className="navbarLinks" onClick={handleDrawerToggle}>
                                     {item}
                                 </a>
                             )}
@@ -167,17 +133,20 @@ export default function Navbar() {
                                     justifyContent: 'space-evenly'
                                 }}>
                                     {navItems.map((item) => (
-                                        < div key={item} >
+                                        <div key={item} >
                                             {item === 'Solutions' ? (
                                                 <>
-                                                    <a
-                                                        href={`#${item.toLowerCase()}`}
-                                                        className="navbarLinks"
-                                                        onMouseEnter={handleMenuOpen}
-                                                    // onMouseLeave={handleMenuClose}
+                                                    <div
+                                                        onMouseOver={handleMouseEnter}
+                                                        onMouseOut={handleMouseLeave}
+                                                        style={{ height: '2rem' }}
                                                     >
-                                                        {item}
-                                                    </a>
+                                                        <a className="navbarLinks">
+                                                            {item}
+                                                        </a>
+                                                        {isMouseEnter && <Dropdown handleMouseLeave={handleMouseLeave} setMobileOpen={setMobileOpen} />}
+                                                        {/* <Dropdown /> */}
+                                                    </div>
                                                 </>
                                             ) : (
                                                 <a href={`#${item.toLowerCase()}`} className="navbarLinks">
@@ -208,7 +177,6 @@ export default function Navbar() {
                     </Drawer>
                 </Box>
             </Box >
-            {renderDropdownMenu}
         </>
     );
 }

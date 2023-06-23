@@ -15,7 +15,7 @@ const BitSaudi = () => {
                 // border: '2px solid red',
                 textAlign: 'center',
                 fontSize: '3rem',
-                margin: '5rem 0',
+                margin: '2rem 0 4rem',
                 // marginBottom: '5rem',
             }} className="solutionHead">Our Solutions</h1>
             <Grid container spacing={{ xs: 5, md: 3 }} justifyContent="center" className="mission">
@@ -29,13 +29,13 @@ const BitSaudi = () => {
                     }} className="solution">
                         BitMemoir Saudi
                     </Typography>
-                    <Card sx={{ boxShadow: 'none' }}>
+                    <Card sx={{ boxShadow: 'none' }} className="solutionImgContainer">
                         <CardMedia
                             component="img"
                             height="90%"
                             image={BitSaudiImg}
                             alt="Image Alt Text"
-                            className='aboutImg'
+                            className="solutionImg"
                         />
                     </Card>
                 </Grid>
