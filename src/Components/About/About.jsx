@@ -45,9 +45,9 @@ const About = () => {
                                 typography: 'body1',
                                 lineHeight: 1.8,
                                 textAlign: 'justify',
-                                marginLeft: '0'
+                                marginLeft: '0',
                             }} gutterBottom>
-                            Our mission is to empower individuals, organizations, and communities by providing innovative and transformative technological solutions while being at the forefront of technological innovation, making a positive social impact and creating a better future through technology. Acting as a tech partner, we assist our clients in identifying various problem areas and ideate, develop and deploy solutions to resolve them.
+                            Our mission is to empower individuals, organizations and communities with transformative technological solutions, such as artificial intelligence and blockchain. We make a positive social impact by being at the forefront of technological innovation and striving to create a better future through technology.   As your tech partner, we're committed to identifying problem areas and collaborating with our clients to ideate, develop and deploy solutions that will help resolve them. Whether it's through AI-powered automation or blockchain-enabled data security, we're here to support you every step of the way. Join us in shaping the future of technology, and start building a better tomorrow today.
                         </Typography>
                     </Box>
                 </Grid>

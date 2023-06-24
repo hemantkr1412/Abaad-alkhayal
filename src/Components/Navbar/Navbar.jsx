@@ -10,7 +10,7 @@ import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import logo from '../../../public/logo.png';
+import logo from '/logo.png';
 import '../Navbar/Navbar.css'
 import Dropdown from './Dropdown';
 
@@ -19,7 +19,7 @@ const navItems = ['Home', 'About', 'Solutions', 'Team', 'Contact'];
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [anchorEl, setAnchorEl] = useState(null);
+    // const [anchorEl, setAnchorEl] = useState(null);
     const [scroll, setScroll] = useState(false);
     const [isMouseEnter, setIsMouseEnter] = useState(false);
 
@@ -35,14 +35,22 @@ export default function Navbar() {
     };
 
     const handleMouseEnter = () => {
-        console.log(`mouse enters`);
+        // console.log(`mouse enters`);
         setIsMouseEnter(true)
     }
     const handleMouseLeave = () => {
-        console.log(`mouse leaves`);
+        // console.log(`mouse leaves`);
         setIsMouseEnter(false)
         setMobileOpen(false)
     }
+
+    const handleSidebarClick = (event) => {
+        // console.log(event.target);
+        const clickedElement = event.target;
+        if (!clickedElement.classList.contains('solutionLink')) {
+            setIsMouseEnter(false)
+        }
+    };
 
     const drawer = (
         <Box sx={{ textAlign: 'center', zIndex: '20' }} id="sidebar">
@@ -62,16 +70,15 @@ export default function Navbar() {
                         }}>
                             {item === 'Solutions' ? (
                                 <>
-                                    <div style={{ position: 'relative' }}>
-                                        <a className="navbarLinks" onClick={handleMouseEnter}>
+                                    <div style={{ position: 'relative' }} className="solutionDivSidebar">
+                                        <a className="navbarLinks solutionLink" onClick={handleMouseEnter}>
                                             {item}
                                         </a>
                                         {isMouseEnter && <Dropdown handleMouseLeave={handleMouseLeave} setMobileOpen={setMobileOpen} />}
-                                        {/* <Dropdown /> */}
                                     </div>
                                 </>
                             ) : (
-                                <a href={`#${item.toLowerCase()}`} className="navbarLinks" onClick={handleDrawerToggle}>
+                                <a href={`#${item.toLowerCase()}`} className="navbarLinks otherLinks" onClick={handleDrawerToggle}>
                                     {item}
                                 </a>
                             )}
@@ -168,6 +175,7 @@ export default function Navbar() {
                         ModalProps={{
                             keepMounted: true,
                         }}
+                        onClick={handleSidebarClick}
                         sx={{
                             display: { xs: 'block', sm: 'none' },
                             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },

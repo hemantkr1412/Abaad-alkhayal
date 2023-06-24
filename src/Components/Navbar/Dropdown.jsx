@@ -11,7 +11,7 @@ const Dropdown = ({ handleMouseLeave, setMobileOpen }) => {
                 padding: 0,
                 backgroundColor: 'white',
                 position: 'absolute',
-                top: { xs: '2rem', sm: '4rem' },
+                top: { xs: '1.5rem', sm: '4rem' },
                 width: { xs: '7rem', sm: 'auto' },
                 zIndex: '100',
                 boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',

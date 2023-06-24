@@ -42,7 +42,7 @@ const BitWallet = () => {
                             BitWallet
                         </Typography>
                         <Typography sx={{ typography: 'body1', lineHeight: 1.8, textAlign: 'justify', marginBottom: '4rem' }} gutterBottom className='solutionInfo'>
-                            An advanced digital wallet designed to provide users with a secure and convenient way to manage their digital assets. BitWallet allows users to store, send, and receive NFTs in a user-friendly interface and also supports seamless integration with popular decentralized applications (DApps) and decentralized finance (DeFi) platforms, enabling users to access a wide range of financial services and participate in tokenized ecosystems.
+                            BitWallet is an innovative digital wallet that offers a safe and effortless way to manage your digital assets. With BitWallet, you can easily store, transfer, and receive NFTs through an easy-to-use interface. Additionally, our digital wallet integrates seamlessly with leading decentralized applications and DeFi platforms, which means you can easily access a range of financial services and participate in tokenized ecosystems. Trust us to provide a secure and efficient method of managing your digital wealth.
                         </Typography>
                         <Link className="launchBtn" to="https://bitmemoirsaudi.netlify.app/#/bitwalletpage" target="_blank">Launch</Link>
                     </Box>

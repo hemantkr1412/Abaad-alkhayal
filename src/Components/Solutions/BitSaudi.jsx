@@ -49,7 +49,7 @@ const BitSaudi = () => {
                             BitMemoir Saudi
                         </Typography>
                         <Typography sx={{ typography: 'body1', lineHeight: 1.8, textAlign: 'justify', marginBottom: '4rem' }} gutterBottom className='solutionInfo'>
-                            A unique NFT-utility platform leveraging blockchain technology to enhance the security, authenticity, and accessibility of documents. BitMemoir resolves multiple market problems through its diverse bouquet of offerings. The platform primarily focuses on negating the possibility of creating fake documents and identity theft.
+                            Introducing BitMemoir - the innovative NFT-utility platform that leverages the power of blockchain to enhance document security, authentication, and accessibility. Our diverse bouquet of offerings addresses multiple market problems, with a primary focus on mitigating the risks of creating fake documents and identity theft. Join us in shaping a safer and more secure digital future.
                         </Typography>
                         <Link className="launchBtn" to="https://bitmemoirsaudi.netlify.app/" target="_blank">Launch</Link>
                     </Box>

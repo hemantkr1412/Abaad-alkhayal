@@ -20,9 +20,9 @@
     height: 100%;
 }
 
-.missionBox {
+/* .missionBox {
     padding: 4rem;
-}
+} */
 
 @media only screen and (max-width : 600px) {
     .missionImgContainer {
@@ -56,7 +56,8 @@
 @media only screen and (max-width : 900px) {
     .missionBox {
         margin-left: 0 !important;
-        padding: 3rem 2rem
+        /* padding: 3rem 2rem; */
+        padding: 0 1rem;
     }
 }
 
@@ -69,11 +70,5 @@
     .aboutHead {
         font-size: 2.3rem !important;
         margin-bottom: 2rem !important;
-    }
-}
-
-@media only screen and (max-width : 400px) {
-    #about {
-        height: 15rem !important;
     }
 }

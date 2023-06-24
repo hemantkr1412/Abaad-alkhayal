@@ -11,7 +11,7 @@
 
 #about {
     /* border: 2px solid red; */
-    height: 6rem !important;
+    height: 7rem !important;
     margin-top: -6rem !important;
 }
 
@@ -37,7 +37,13 @@
 
     #about {
         height: 10rem !important;
-        margin-top: 1rem !important;
+        margin-top: 8rem !important;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    #about {
+        height: 11rem !important;
     }
 }
 
@@ -59,5 +65,9 @@
 @media only screen and (min-width : 992px) and (max-width : 1200px) {
     #about {
         margin-top: -8rem !important;
+    }
+
+    .homeDesc {
+        font-size: 1rem !important;
     }
 }

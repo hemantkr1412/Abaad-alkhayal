@@ -35,7 +35,10 @@ const Home = () => {
                         justifyContent: 'center',
                         '@media (maxWidth: 900px)': { xs: 6 }
                     }}>
-                    <Box sx={{ width: '77%', textAlign: 'start' }} className="homeTextBox">
+                    <Box sx={{
+                        width: { xs: '90%', sm: '90%', md: '77%' },
+                        textAlign: 'start'
+                    }} className="homeTextBox">
                         <Typography variant="h3" gutterBottom className="homeHead" sx={{
                             fontWeight: 'bold',
                         }}>
@@ -44,7 +47,7 @@ const Home = () => {
                         <Typography variant="h6" className="homeDesc" gutterBottom sx={{
                             textAlign: 'justify',
                         }}>
-                            With a deep-rooted commitment to pushing boundaries, we strive to redefine what is achievable in the digital realm. By blending creativity with technical expertise, we empower businesses to unlock their full potential and embark on a transformative journey.
+                            We are a Saudi-based software company that leverages the latest technologies like blockchain and artificial intelligence to help businesses thrive in the digital age. With a passion for innovation and a drive to surpass limits, we deliver unparalleled solutions that empower enterprises to reach new heights. Combining technical prowess with creative flair, we bring forth transformative experiences that unlock your business's true potential.
                         </Typography>
                     </Box>
                 </Grid>
