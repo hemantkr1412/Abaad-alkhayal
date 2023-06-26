@@ -46,7 +46,7 @@ const About = () => {
                                 lineHeight: 1.8,
                                 textAlign: 'justify',
                                 marginLeft: '0',
-                            }} gutterBottom>
+                            }} gutterBottom id="aboutInfo">
                             Our mission is to empower individuals, organizations and communities with transformative technological solutions, such as artificial intelligence and blockchain. We make a positive social impact by being at the forefront of technological innovation and striving to create a better future through technology.   As your tech partner, we're committed to identifying problem areas and collaborating with our clients to ideate, develop and deploy solutions that will help resolve them. Whether it's through AI-powered automation or blockchain-enabled data security, we're here to support you every step of the way. Join us in shaping the future of technology, and start building a better tomorrow today.
                         </Typography>
                     </Box>

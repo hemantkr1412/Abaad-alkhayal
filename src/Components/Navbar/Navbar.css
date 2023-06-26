@@ -31,3 +31,11 @@
 .dropdownLinks:hover {
     background: rgb(244, 244, 244)
 }
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+    .navbarLinks {
+        font-size: 0.8rem;
+    }
+}

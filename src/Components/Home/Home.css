@@ -43,7 +43,7 @@
 
 @media only screen and (max-width : 400px) {
     #about {
-        height: 11rem !important;
+        height: 13rem !important;
     }
 }
 
@@ -59,6 +59,16 @@
     #about {
         height: 4rem !important;
         margin-top: -6rem !important;
+    }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+    .homeHead {
+        font-size: 2rem !important;
+    }
+
+    .homeDesc {
+        font-size: 0.8rem !important;
     }
 }
 

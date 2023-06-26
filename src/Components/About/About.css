@@ -50,6 +50,10 @@
     .aboutHead {
         font-size: 2.4rem !important;
     }
+
+    #aboutInfo {
+        font-size: 0.8rem !important;
+    }
 }
 
 
