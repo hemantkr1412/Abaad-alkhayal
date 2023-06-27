@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
+import Select from '@mui/material/Select';
 import './Contact.css'
 
+const formDetail = [
+    { label: 'Name', placeholder: "Andrea" },
+    { label: 'Email', placeholder: "andrea@gmail.com" },
+    { label: 'Purpose', placeholder: "Select purpose" },
+    { label: 'Message', placeholder: "Your message" }
+]
 const Contact = () => {
-    const formDetail = [
-        { label: 'Name', placeholder: "Andrea" },
-        { label: 'Email', placeholder: "andrea@gmail.com" },
-        { label: 'Theme', placeholder: "Job" },
-        { label: 'Message', placeholder: "Your message" }
-    ]
+    const [inputDetails, setInputDetails] = useState({})
+    const [userQuery, setUserQuery] = useState([]);
+
+    const inputEvent = (e) => {
+        const name = e.target.name;
+        const val = e.target.value;
+        console.log(name, val);
+        setInputDetails({ ...inputDetails, [name]: val });
+    }
+
+    const submitForm = () => {
+        setUserQuery((prev) => [...userQuery, inputDetails])
+    }
 
     return (
         <>
@@ -63,12 +78,36 @@ const Contact = () => {
                                 return (
                                     <FormControl variant="standard" className='inputDiv' key={id}>
                                         <InputLabel htmlFor="component-simple" className="inputLabel">{elem.label}</InputLabel>
-                                        <Input id="component-simple" defaultValue={elem.placeholder} className='input' />
+                                        {elem.label === 'Purpose' ? (
+                                            <Select
+                                                labelId="demo-simple-select-standard-label"
+                                                id="demo-simple-select-standard"
+                                                // value={age}
+                                                // onChange={handleChange}
+                                                label="Purpose"
+                                                name="Purpose"
+                                                sx={{ minWidth: 195 }}
+                                                onChange={inputEvent}
+                                            >
+                                                <MenuItem value="">
+                                                    <em>None</em>
+                                                </MenuItem>
+                                                <MenuItem value="General Inquiry">General Inquiry</MenuItem>
+                                                <MenuItem value="Product or Service Information">Product or Service Information</MenuItem>
+                                                <MenuItem value="Partnership or Collaboration">Partnership or Collaboration</MenuItem>
+                                                <MenuItem value="Technical Support">Technical Support</MenuItem>
+                                                <MenuItem value="Feedback or Suggestions">Feedback or Suggestions</MenuItem>
+                                                <MenuItem value="Other">Other</MenuItem>
+                                            </Select>
+                                        ) : (
+                                            <Input id="component-simple" defaultValue={elem.placeholder} className='input' onChange={inputEvent} name={elem.label} />
+                                        )}
                                     </FormControl>
+
                                 )
                             })
                         }
-                        <Button variant="contained" className="formBtn" sx={{ background: '#185CFF', margin: '1rem 2rem 0 0' }}>Send</Button>
+                        <Button variant="contained" className="formBtn" sx={{ background: '#185CFF', margin: '1rem 2rem 0 0' }} onClick={submitForm}>Send</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={1} sx={{ display: { xs: 'none', lg: 'block' } }}></Grid>

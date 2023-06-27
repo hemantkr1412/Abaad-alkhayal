@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Card, CardMedia } from '@mui/material';
-import aboutImg2 from './assets/about3.png';
+import aboutImg2 from './assets/about2.png';
 import './About.css'
 
 const About = () => {
@@ -26,6 +26,7 @@ const About = () => {
                             component="img"
                             // height="80%"
                             image={aboutImg2}
+                            sx={{ objectFit: 'contain' }}
                             alt="Image Alt Text"
                             className="missionImg"
                         />

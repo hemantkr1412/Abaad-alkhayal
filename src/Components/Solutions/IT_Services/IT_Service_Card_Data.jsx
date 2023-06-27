@@ -1,9 +1,9 @@
-import vector1 from './assets/vector-1.png';
-import vector2 from './assets/vector-2.png';
-import vector3 from './assets/vector-3.png';
-import vector4 from './assets/vector-4.png';
-import vector5 from './assets/vector-5.png';
-import vector6 from './assets/vector-6.png';
+import vector1 from './assets/img-1.png';
+import vector2 from './assets/img-2.png';
+import vector3 from './assets/img-3.png';
+import vector4 from './assets/img-4.png';
+import vector5 from './assets/img-5.png';
+import vector6 from './assets/img-6.png';
 
 export const IT_Service_Card_Data = [
     {

@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Card, CardMedia } from '@mui/material';
-import BitwalletImg from './assets/Bitwallet.png';
+import BitwalletImg from './assets/Bitwallet2.png';
 import { Link } from 'react-router-dom';
 import './BitSaudi.css'
 

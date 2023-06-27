@@ -43,7 +43,7 @@
 
 @media only screen and (max-width : 400px) {
     #about {
-        height: 13rem !important;
+        height: 7rem !important;
     }
 }
 
@@ -54,6 +54,10 @@
 
     .homeDesc {
         font-size: 1rem !important;
+    }
+
+    #homeImgContainer {
+        margin: auto 1rem auto 1.8rem !important;
     }
 
     #about {

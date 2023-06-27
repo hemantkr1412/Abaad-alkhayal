@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import logo from '/logo.png';
 import Box from '@mui/material/Box';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -26,7 +26,7 @@ const Footer = () => {
                     justifyContent: 'flex-end'
                 }} id="footerIcons">
                     <Box>
-                        <FacebookRoundedIcon sx={{ color: '#185CFF', transform: 'scale(1.4)', cursor: 'pointer' }} />
+                        <InstagramIcon sx={{ color: '#185CFF', transform: 'scale(1.4)', cursor: 'pointer' }} />
                         <TwitterIcon className="footerIcons" />
                         <LinkedInIcon className="footerIcons" />
                         <TelegramIcon className="footerIcons" />

@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import home from './assets/home.png'
+import home from './assets/home.jpg'
 import Typography from '@mui/material/Typography';
 import './Home.css'
 
@@ -21,7 +21,7 @@ const Home = () => {
                         // border: '2px solid red',
                         backgroundImage: `url(${home})`,
                         backgroundPosition: 'center',
-                        backgroundSize: 'contain',
+                        backgroundSize: 'auto',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'block', sm: 'none' },
                         '@media (maxWidth: 900px)': { xs: 6 }
@@ -62,7 +62,7 @@ const Home = () => {
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'none', sm: 'block' },
                         '@media (maxWidth: 900px)': { xs: 6 }
-                    }}>
+                    }} id="homeImgContainer">
                 </Grid>
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
             </Grid >

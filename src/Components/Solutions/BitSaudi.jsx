@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Card, CardMedia } from '@mui/material';
-import BitSaudiImg from './assets/Bitsaudi.png';
+import BitSaudiImg from './assets/bitsaudi3.jpg';
 import { Link } from 'react-router-dom';
 import './BitSaudi.css'
 
