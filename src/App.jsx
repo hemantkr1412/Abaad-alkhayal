@@ -29,9 +29,6 @@ function App() {
       <Team />
       <Contact />
       <Footer />
-      {/* <video id="background-video" autoplay muted loop>
-        <source src="video.mp4" type="video/mp4" />
-      </video> */}
 
       {/* <Routes>
         <Route index element={<Home />} />

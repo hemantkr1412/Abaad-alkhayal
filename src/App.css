@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-image: url('bg-4.jpeg');
+  background-image: url('/bg-4.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,10 +25,6 @@ body {
   height: 100%;
   /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: rgb(94 94 94 / 50%);
-  /* background-image: url('bg-4.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
   z-index: -1;
 }
 
