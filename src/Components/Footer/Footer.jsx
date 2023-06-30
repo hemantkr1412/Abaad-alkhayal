@@ -13,14 +13,13 @@ const Footer = () => {
         <>
             <Grid container spacing={2} className="footerDiv">
                 <Grid item xs={1}></Grid>
-                <Grid item xs={12} sm={5} md={6} lg={6} sx={{ borderTop: '2px solid #C9DCEC' }} id="footerLogo">
+                <Grid item xs={12} sm={5} md={6} lg={6} id="footerLogo">
                     <img src={logo} alt="" style={{
                         height: '5rem',
                         marginTop: '.5rem',
                     }} />
                 </Grid>
                 <Grid item xs={12} sm={5} md={4} lg={3} sx={{
-                    borderTop: '2px solid #C9DCEC',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'flex-end'
@@ -38,7 +37,9 @@ const Footer = () => {
                 color: '#9497A1',
                 fontSize: "14px",
                 textAlign: 'center',
-                margin: '1rem'
+                // margin: '1rem',
+                paddingBottom: '1rem',
+                background: '#D5D7D4'
             }}>
                 © 2023 Aba'ad Alkhayal. All Rights Reserved.
             </p>

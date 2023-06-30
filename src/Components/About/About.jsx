@@ -18,6 +18,7 @@ const About = () => {
                         mb: 4,
                         display: { xs: 'block', sm: 'none' },
                         textAlign: 'center',
+                        color: 'white'
                     }} className="aboutHead">
                         Our Mission
                     </Typography>
@@ -26,7 +27,7 @@ const About = () => {
                             component="img"
                             // height="80%"
                             image={aboutImg2}
-                            sx={{ objectFit: 'contain' }}
+                            sx={{ objectFit: 'cover' }}
                             alt="Image Alt Text"
                             className="missionImg"
                         />
@@ -37,7 +38,8 @@ const About = () => {
                     <Box sx={{ textAlign: 'start', ml: 5 }} className="missionBox">
                         <Typography variant="h3" gutterBottom sx={{
                             fontWeight: 'bold', mb: 4,
-                            display: { xs: 'none', sm: 'block' }
+                            display: { xs: 'none', sm: 'block' },
+                            color: 'white'
                         }} className="aboutHead">
                             Our Mission
                         </Typography>
@@ -47,6 +49,7 @@ const About = () => {
                                 lineHeight: 1.8,
                                 textAlign: 'justify',
                                 marginLeft: '0',
+                                color: 'white'
                             }} gutterBottom id="aboutInfo">
                             Our mission is to empower individuals, organizations and communities with transformative technological solutions, such as artificial intelligence and blockchain. We make a positive social impact by being at the forefront of technological innovation and striving to create a better future through technology.   As your tech partner, we're committed to identifying problem areas and collaborating with our clients to ideate, develop and deploy solutions that will help resolve them. Whether it's through AI-powered automation or blockchain-enabled data security, we're here to support you every step of the way. Join us in shaping the future of technology, and start building a better tomorrow today.
                         </Typography>

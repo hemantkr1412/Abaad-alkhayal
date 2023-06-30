@@ -8,9 +8,14 @@
     height: 0;
 }
 
+.imgContainer {
+    display: flex;
+    align-items: center;
+}
+
 .missionImgContainer {
     /* border: 2px solid red; */
-    height: 27rem;
+    height: 20rem;
     display: flex;
     justify-content: flex-end;
 }

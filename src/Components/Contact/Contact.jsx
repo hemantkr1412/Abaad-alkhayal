@@ -40,7 +40,6 @@ const Contact = () => {
                 fontWeight: 'bold',
                 textAlign: 'center',
                 fontSize: '2rem',
-                background: '#F1F6FA'
             }} id="contactHead">
                 Feel free to reach out for further details
             </Typography>
@@ -57,11 +56,11 @@ const Contact = () => {
                         </Typography>
 
                         <Box sx={{ mt: 4 }}>
-                            <p className='contactType'>Email address</p>
+                            <p>Email address</p>
                             <a href="mailto: support@beimagine.tech" className="contactLink">support@beimagine.tech</a>
                         </Box>
                         <Box sx={{ mt: 4 }}>
-                            <p className='contactType'>Address</p>
+                            <p>Address</p>
                             <p className='contactInfo'>03 Laffa restaurant building,
                                 Sheikh Khalifa Bin Zayed St - opp. Burjuman Mall,
                                 Dubai,United Arab Emirates</p>
@@ -70,7 +69,7 @@ const Contact = () => {
                 </Grid>
                 <Grid item xs={12} sm={6} md={5} lg={4} className="formOuterDiv">
                     <Box component="div" className="formDiv">
-                        <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', marginLeft: '2rem', marginTop: '1rem' }} >
+                        <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', marginLeft: '2rem', marginTop: '1rem', color: 'black' }} >
                             Contact Us
                         </Typography>
                         {
@@ -89,18 +88,19 @@ const Contact = () => {
                                                 sx={{ minWidth: 195 }}
                                                 onChange={inputEvent}
                                             >
-                                                <MenuItem value="">
+                                                {/* <MenuItem value="">
                                                     <em>None</em>
-                                                </MenuItem>
+                                                </MenuItem> */}
                                                 <MenuItem value="General Inquiry">General Inquiry</MenuItem>
                                                 <MenuItem value="Product or Service Information">Product or Service Information</MenuItem>
                                                 <MenuItem value="Partnership or Collaboration">Partnership or Collaboration</MenuItem>
                                                 <MenuItem value="Technical Support">Technical Support</MenuItem>
                                                 <MenuItem value="Feedback or Suggestions">Feedback or Suggestions</MenuItem>
+                                                <MenuItem value="Work with us">Work with us</MenuItem>
                                                 <MenuItem value="Other">Other</MenuItem>
                                             </Select>
                                         ) : (
-                                            <Input id="component-simple" defaultValue={elem.placeholder} className='input' onChange={inputEvent} name={elem.label} />
+                                            <Input id="component-simple" placeholder={elem.placeholder} className='input' onChange={inputEvent} name={elem.label} />
                                         )}
                                     </FormControl>
 

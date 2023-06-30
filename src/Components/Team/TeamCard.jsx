@@ -14,12 +14,13 @@ export default function TeamCard(props) {
         }}>
             <CardMedia
                 component="img"
+                height="350"
                 alt="green iguana"
                 // height="70%"
                 image={props.img}
             />
             <CardContent>
-                <Typography gutterBottom variant="h6" component="div" sx={{ fontWeight: 'bold' }} className="teamMemberName">
+                <Typography gutterBottom variant="body1" component="div" sx={{ fontWeight: 'bold' }} className="teamMemberName">
                     {props.name}
                 </Typography>
                 <Typography variant="body2" color="text.secondary" className="memberDesignation">

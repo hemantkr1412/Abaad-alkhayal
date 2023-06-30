@@ -12,7 +12,8 @@ const Home = () => {
             <Grid container spacing={2}
                 sx={{
                     // border: '2px solid red',
-                    height: { xs: '70vh', sm: '86vh' }
+                    height: { xs: '70vh', sm: '86vh' },
+                    zIndex: 1
                 }}>
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
                 <Grid item xs={12} sm={5}
@@ -41,13 +42,15 @@ const Home = () => {
                     }} className="homeTextBox">
                         <Typography variant="h3" gutterBottom className="homeHead" sx={{
                             fontWeight: 'bold',
+                            color: 'white'
                         }}>
                             Who We Are
                         </Typography>
                         <Typography variant="h6" className="homeDesc" gutterBottom sx={{
                             textAlign: 'justify',
+                            color: 'white'
                         }}>
-                            We are a Saudi-based software company that leverages the latest technologies like blockchain and artificial intelligence to help businesses thrive in the digital age. With a passion for innovation and a drive to surpass limits, we deliver unparalleled solutions that empower enterprises to reach new heights. Combining technical prowess with creative flair, we bring forth transformative experiences that unlock your business's true potential.Join us on an exciting journey to break new ground in the digital realm.
+                            We are a Saudi-based software company that leverages the latest technologies like blockchain and artificial intelligence to help businesses thrive in the digital age. With a passion for innovation and a drive to surpass limits, we deliver unparalleled solutions that empower enterprises to reach new heights. Combining technical prowess with creative flair, we bring forth transformative experiences that unlock your business's true potential. Join us on an exciting journey to break new ground in the digital realm.
                         </Typography>
                     </Box>
                 </Grid>

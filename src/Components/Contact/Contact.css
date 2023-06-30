@@ -7,17 +7,13 @@
 #contact {
     /* border: 2px solid red; */
     height: 6rem;
-    background: #F1F6FA;
+    /* background: #F1F6FA; */
 }
 
 .contactDiv {
     /* border: 2px solid red; */
-    background: #F1F6FA;
+    /* background: #F1F6FA; */
     padding: 1rem 4rem 4rem 4rem !important;
-}
-
-.contactType {
-    color: #9497A1;
 }
 
 .contactInfo {
@@ -27,7 +23,7 @@
 .contactLink {
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .formOuterDiv {
@@ -48,7 +44,7 @@
 }
 
 .inputDiv {
-    margin: 1rem 1rem 1rem 2.5rem !important;
+    margin: 0.5rem 1rem 1rem 2.5rem !important;
 }
 
 .inputLabel {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Home from './Components/Home/Home.jsx';
+import Floater from './Components/Floater/Floater.jsx';
 import BitSaudi from './Components/Solutions/BitSaudi.jsx';
 import BitWallet from './Components/Solutions/BitWallet.jsx';
 import IT_Services from './Components/Solutions/IT_Services/IT_Services.jsx';
@@ -14,8 +15,13 @@ import './App.css';
 function App() {
   return (
     <>
+      <div className="overlay"></div>
+      {/* <video autoPlay muted loop id="video-bg">
+        <source src="video.mp4" type="video/mp4" />
+      </video> */}
       <Navbar />
       <Home />
+      <Floater />
       <About />
       <BitSaudi />
       <BitWallet />
@@ -23,6 +29,9 @@ function App() {
       <Team />
       <Contact />
       <Footer />
+      {/* <video id="background-video" autoplay muted loop>
+        <source src="video.mp4" type="video/mp4" />
+      </video> */}
 
       {/* <Routes>
         <Route index element={<Home />} />

@@ -10,7 +10,7 @@ import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import logo from '/logo.png';
+import logo from '/logo2.png';
 import '../Navbar/Navbar.css'
 import Dropdown from './Dropdown';
 
@@ -95,9 +95,10 @@ export default function Navbar() {
                 <CssBaseline />
                 <AppBar component="nav"
                     sx={{
-                        background: "white",
-                        zIndex: 1,
-                        boxShadow: !scroll && "none"
+                        // background: "transparent",
+                        zIndex: 10,
+                        boxShadow: "none",
+                        background: scroll ? "#343A4B" : "transparent"
                     }}>
                     <Toolbar>
                         <IconButton

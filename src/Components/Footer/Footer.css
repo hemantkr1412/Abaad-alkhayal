@@ -6,8 +6,9 @@
 
 .footerDiv {
     /* border: 2px solid red; */
-    padding: 2rem !important;
-    background: #F1F6FA;
+    padding: 1rem !important;
+    /* background: #F1F6FA; */
+    background: #D5D7D4;
 }
 
 .footerIcons {
