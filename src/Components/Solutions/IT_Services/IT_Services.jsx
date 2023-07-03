@@ -8,7 +8,7 @@ const IT_Services = () => {
     return (
         <>
             <div id="itservices"></div>
-            <div className='serviceDiv' >
+            <div className='serviceDiv'>
                 <h1>Our Core Services</h1>
                 <p style={{
                     marginBottom: '3rem',

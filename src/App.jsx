@@ -16,9 +16,6 @@ function App() {
   return (
     <>
       <div className="overlay"></div>
-      {/* <video autoPlay muted loop id="video-bg">
-        <source src="video.mp4" type="video/mp4" />
-      </video> */}
       <Navbar />
       <Home />
       <Floater />

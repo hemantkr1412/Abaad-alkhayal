@@ -1,75 +1,87 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import home from './assets/home.jpg'
+import home from './assets/home.png'
 import Typography from '@mui/material/Typography';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import './Home.css'
 
 const Home = () => {
+    // useEffect(() => {
+    //     AOS.init({
+    //         offset: 10,
+    //         duration: 300,
+    //     });
+    // }, [])
     return (
         <>
             <div id="home"></div>
             <Grid container spacing={2}
                 sx={{
                     // border: '2px solid red',
-                    height: { xs: '70vh', sm: '86vh' },
-                    zIndex: 1
-                }}>
-                <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
+                    height: { xs: '70vh', sm: '90vh' },
+                    zIndex: 1,
+                    display: 'flex',
+                    alignItems: 'center'
+                }} id="homeContainer">
+                <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
                 <Grid item xs={12} sm={5}
                     sx={{
-                        height: '68%',
                         // border: '2px solid red',
+                        height: '68%',
                         backgroundImage: `url(${home})`,
                         backgroundPosition: 'center',
-                        backgroundSize: 'auto',
+                        backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'block', sm: 'none' },
-                        '@media (maxWidth: 900px)': { xs: 6 }
-                    }}>
+                        // '@media (maxWidth: 900px)': { xs: 6 }
+                    }} id="homeImg">
                 </Grid>
-                <Grid item xs={12} sm={6} md={5}
+                <Grid item xs={12} sm={5}
                     sx={{
+                        // border: '2px solid red',
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        '@media (maxWidth: 900px)': { xs: 6 }
+                        // '@media (maxWidth: 900px)': { xs: 6 }
                     }}>
                     <Box sx={{
-                        width: { xs: '90%', sm: '90%', md: '77%' },
+                        // border: '2px solid blue',
+                        width: { xs: '90%', sm: '90%', lg: '70%' },
                         textAlign: 'start'
                     }} className="homeTextBox">
-                        <Typography variant="h3" gutterBottom className="homeHead" sx={{
+                        <Typography variant="h1" gutterBottom className="homeHead" sx={{
                             fontWeight: 'bold',
                             color: 'white'
                         }}>
-                            Who We Are
+                            Aba'ad Alkhayal
                         </Typography>
-                        <Typography variant="h6" className="homeDesc" gutterBottom sx={{
+                        <Typography variant="body1" className="homeDesc" gutterBottom sx={{
                             textAlign: 'justify',
-                            color: 'white'
+                            color: 'white',
                         }}>
-                            We are a Saudi-based software company that leverages the latest technologies like blockchain and artificial intelligence to help businesses thrive in the digital age. With a passion for innovation and a drive to surpass limits, we deliver unparalleled solutions that empower enterprises to reach new heights. Combining technical prowess with creative flair, we bring forth transformative experiences that unlock your business's true potential. Join us on an exciting journey to break new ground in the digital realm.
+                            Saudi-based software company
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={6} md={5}
+                <Grid item xs={12} sm={5}
                     sx={{
                         height: '80%',
-                        // border: '2px solid red',
-                        marginTop: '2rem',
+                        // border: '2px solid yellow',
+                        // marginTop: '2rem',
                         backgroundImage: `url(${home})`,
-                        backgroundPosition: 'center',
+                        backgroundPosition: window.innerWidth < 1200 ? 'center' : 'center',
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'none', sm: 'block' },
-                        '@media (maxWidth: 900px)': { xs: 6 }
+                        // '@media (maxWidth: 900px)': { xs: 6 }
                     }} id="homeImgContainer">
                 </Grid>
-                <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
+                <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
             </Grid >
-            <div id="about"></div>
+            {/* <div id="about"></div> */}
         </>
     )
 }

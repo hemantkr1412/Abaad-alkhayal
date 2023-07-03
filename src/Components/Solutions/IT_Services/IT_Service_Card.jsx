@@ -1,10 +1,12 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/system';
 import { css } from '@emotion/react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './IT_Services.css';
 
 const CardMediaWrapper = styled(CardMedia)(({ theme }) => css`
@@ -13,7 +15,12 @@ const CardMediaWrapper = styled(CardMedia)(({ theme }) => css`
 
 export default function IT_Service_Card(props) {
     // console.log(props);
-
+    useEffect(() => {
+        AOS.init({
+            offset: 100,
+            duration: 800,
+        });
+    }, [])
     return (
         <Card sx={{
             maxWidth: 345,
@@ -24,7 +31,7 @@ export default function IT_Service_Card(props) {
             boxShadow: '0px 4px 12px rgba(12, 68, 204, 0.1)',
             borderRadius: '6px',
             margin: 'auto'
-        }} className="serviceCard">
+        }} className="serviceCard" data-aos="zoom-in">
             <CardMediaWrapper
                 component="img"
                 height="40"

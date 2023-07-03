@@ -10,7 +10,8 @@ import ListItem from '@mui/material/ListItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import logo from '/logo2.png';
+import logo1 from '/logo1.png';
+import logo2 from '/logo2.png';
 import '../Navbar/Navbar.css'
 import Dropdown from './Dropdown';
 
@@ -53,9 +54,12 @@ export default function Navbar() {
     };
 
     const drawer = (
-        <Box sx={{ textAlign: 'center', zIndex: '20' }} id="sidebar">
+        <Box sx={{
+            textAlign: 'center',
+            zIndex: '20',
+        }} id="sidebar">
             <Typography variant="h6" sx={{ my: 2 }}>
-                <img src={logo} alt="" style={{
+                <img src={logo1} alt="" style={{
                     height: '5rem',
                     marginTop: '.5rem',
                 }} />
@@ -71,14 +75,14 @@ export default function Navbar() {
                             {item === 'Solutions' ? (
                                 <>
                                     <div style={{ position: 'relative' }} className="solutionDivSidebar">
-                                        <a className="navbarLinks solutionLink" onClick={handleMouseEnter}>
+                                        <a className="navbarLinks solutionLink" onClick={handleMouseEnter} style={{ color: 'black' }}>
                                             {item}
                                         </a>
                                         {isMouseEnter && <Dropdown handleMouseLeave={handleMouseLeave} setMobileOpen={setMobileOpen} />}
                                     </div>
                                 </>
                             ) : (
-                                <a href={`#${item.toLowerCase()}`} className="navbarLinks otherLinks" onClick={handleDrawerToggle}>
+                                <a href={`#${item.toLowerCase()}`} className="navbarLinks otherLinks" onClick={handleDrawerToggle} style={{ color: 'black' }}>
                                     {item}
                                 </a>
                             )}
@@ -96,9 +100,12 @@ export default function Navbar() {
                 <AppBar component="nav"
                     sx={{
                         // background: "transparent",
+                        // border: '2px solid red',
                         zIndex: 10,
                         boxShadow: "none",
-                        background: scroll ? "#343A4B" : "transparent"
+                        background: scroll ? "#343A4B" : "transparent",
+                        position: 'fixed', // Add this line
+                        top: 0, // Add this line
                     }}>
                     <Toolbar>
                         <IconButton
@@ -106,7 +113,7 @@ export default function Navbar() {
                             aria-label="open drawer"
                             edge="start"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}
+                            sx={{ mr: 2, display: { sm: 'none' }, color: 'white' }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -126,10 +133,12 @@ export default function Navbar() {
                                 }}
                                 className='navbarTitle'
                             >
-                                <img src={logo} alt="" style={{
-                                    height: '5rem',
-                                    marginTop: '.5rem',
-                                }} />
+                                <a href="#home">
+                                    <img src={logo2} alt="" style={{
+                                        height: '5rem',
+                                        marginTop: '.5rem',
+                                    }} id="navbarLogo" />
+                                </a>
                             </Typography>
                             <Box xs={6} sx={{
                                 // border: '2px solid red',
@@ -149,7 +158,7 @@ export default function Navbar() {
                                                         onMouseOut={handleMouseLeave}
                                                         style={{ height: '2rem' }}
                                                     >
-                                                        <a className="navbarLinks">
+                                                        <a className="solutionLink">
                                                             {item}
                                                         </a>
                                                         {isMouseEnter && <Dropdown handleMouseLeave={handleMouseLeave} setMobileOpen={setMobileOpen} />}
@@ -157,7 +166,7 @@ export default function Navbar() {
                                                     </div>
                                                 </>
                                             ) : (
-                                                <a href={`#${item.toLowerCase()}`} className="navbarLinks">
+                                                <a href={`#${item.toLowerCase()}`} className="navbarLinks" style={{ color: 'white' }}>
                                                     {item}
                                                 </a>
                                             )}

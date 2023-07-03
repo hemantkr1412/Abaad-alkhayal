@@ -5,7 +5,7 @@
 }
 
 #about {
-    height: 0;
+    height: 6rem !important;
 }
 
 .imgContainer {
@@ -13,37 +13,31 @@
     align-items: center;
 }
 
-.missionImgContainer {
+.missionImgContainer,
+.aboutImgContainer {
     /* border: 2px solid red; */
     height: 20rem;
     display: flex;
     justify-content: flex-end;
 }
 
-.missionImg {
+.missionImg,
+.aboutImg {
     /* border: 2px solid red; */
     height: 100%;
 }
 
-/* .missionBox {
-    padding: 4rem;
-} */
-
-@media only screen and (max-width : 600px) {
-    .missionImgContainer {
-        height: 10rem;
-        width: 90%;
-        margin: auto;
-    }
-
-    .aboutHead {
-        font-size: 2.2rem !important;
-    }
+.mission {
+    margin-top: 2rem !important;
 }
 
 
+
+
 @media only screen and (min-width : 600px) and (max-width : 768px) {
-    .missionImgContainer {
+
+    .missionImgContainer,
+    .aboutImgContainer {
         height: 20rem;
     }
 
@@ -63,6 +57,24 @@
 
 
 @media only screen and (max-width : 900px) {
+    .aboutBox {
+        margin-left: 2rem;
+    }
+
+    .aboutImgContainer {
+        height: 16rem;
+        margin-right: 2rem;
+    }
+
+    .missionImgContainer {
+        height: 16rem;
+        margin-left: 2rem;
+    }
+
+    .imgContainer {
+        align-items: center !important;
+    }
+
     .missionBox {
         margin-left: 0 !important;
         /* padding: 3rem 2rem; */
@@ -70,7 +82,39 @@
     }
 }
 
+@media only screen and (max-width : 600px) {
+
+    .missionImgContainer,
+    .aboutImgContainer {
+        height: 17rem;
+        width: 90%;
+        /* margin: auto; */
+        margin-left: 1.5rem;
+    }
+
+    /* .aboutBox {
+        margin-left: 1rem !important;
+    } */
+
+    .aboutHead {
+        font-size: 2.2rem !important;
+    }
+
+    .imgContainer {
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
 @media only screen and (min-width : 900px) and (max-width : 1200px) {
+    #about {
+        height: 2.5rem !important;
+    }
+
+    .imgContainer {
+        align-items: center;
+    }
+
     .missionBox {
         margin-left: 0 !important;
         padding: 3rem 0;

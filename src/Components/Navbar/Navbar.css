@@ -13,7 +13,25 @@
     color: 'black';
 }
 
+.navbarTitle:hover {
+    animation: scaleup(0.2s);
+    transform: scale(1.15);
+    transition: ease 0.4s all;
+}
+
 .navbarLinks {
+    text-decoration: none !important;
+    margin: auto;
+}
+
+.navbarLinks:hover,
+.solutionLink:hover {
+    color: var(--primary) !important;
+    /* text-decoration: underline; */
+}
+
+.solutionLink {
+    cursor: default;
     text-decoration: none;
     color: white;
     margin: auto;
@@ -34,8 +52,24 @@
 
 /* MEDIA QUERY */
 
+@media only screen and (max-width : 1200px) {
+    #navbarLogo {
+        height: 4rem !important;
+    }
+
+    .navbarLinks,
+    .solutionLink {
+        font-size: 0.9rem;
+    }
+}
+
 @media only screen and (min-width : 600px) and (max-width : 768px) {
-    .navbarLinks {
+    #navbarLogo {
+        height: 3.5rem !important;
+    }
+
+    .navbarLinks,
+    .solutionLink {
         font-size: 0.8rem;
     }
 }

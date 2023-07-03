@@ -19,6 +19,27 @@
     /* background: #F1F6FA; */
 }
 
+.teamCard {
+    overflow: hidden !important;
+}
+
+.teamCard .teamImg,
+.teamCard .teamInfoCard {
+    width: 100% !important;
+}
+
+.teamImg:hover {
+    animation: scaleup .2s;
+    transform: scale(1.1);
+    transition: ease 0.4s all;
+}
+
+.teamImg:hover+.teamInfoCard {
+    animation: scaledown 0.2s;
+    transform: translateY(5%) scale(0.95);
+    transition: ease 0.4s all;
+}
+
 /* MEDIA QUERY */
 
 @media only screen and (max-width : 768px) {
@@ -26,8 +47,12 @@
         width: 90% !important;
     }
 
+    .teamImg {
+        height: 225px !important;
+    }
+
     .teamMemberName {
-        font-size: 1rem !important;
+        font-size: 0.9rem !important;
     }
 
     .memberDesignation {
@@ -38,6 +63,24 @@
 @media only screen and (max-width : 500px) {
     .teamDiv {
         padding: 0 1rem 4rem 1rem;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .teamImg {
+        height: 180px !important;
+    }
+
+    .teamInfoCard {
+        padding: 6px !important;
+    }
+
+    .teamMemberName {
+        font-size: 0.8rem !important;
+    }
+
+    .memberDesignation {
+        font-size: .7rem !important;
     }
 }
 

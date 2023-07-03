@@ -16,10 +16,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 100;
 }
 
 .floaterIcon {
     transform: scale(1.2);
+    color: var(--primary);
 }
 
 /* .floaterDiv{

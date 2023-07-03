@@ -5,15 +5,18 @@
 }
 
 #home {
-    /* border: 2px solid red; */
-    height: 6rem;
+    height: 2rem;
 }
 
-#about {
-    /* border: 2px solid red; */
-    height: 7rem !important;
-    margin-top: -6rem !important;
+.homeDesc {
+    font-size: 1.1rem !important;
+    line-height: 1.8rem !important;
 }
+
+/* #about {
+    height: 9rem !important;
+    margin-top: -6rem !important;
+} */
 
 /* MEDIA QUERY */
 
@@ -22,17 +25,22 @@
         height: 4rem;
     }
 
+    #homeImg {
+        margin: 0 -2rem 0 1rem;
+    }
+
     .homeTextBox {
         margin-top: 3rem !important;
     }
 
     .homeHead {
-        font-size: 2rem !important;
+        font-size: 4rem !important;
         text-align: center;
     }
 
     .homeDesc {
-        font-size: 1rem !important;
+        /* font-size: 1rem !important; */
+        text-align: center !important;
     }
 
     #about {
@@ -43,45 +51,63 @@
 
 @media only screen and (max-width : 400px) {
     #about {
-        height: 7rem !important;
+        height: 16rem !important;
     }
 }
 
 @media only screen and (min-width : 600px) and (max-width : 992px) {
     .homeHead {
-        font-size: 2.5rem !important;
+        font-size: 4rem !important;
     }
 
-    .homeDesc {
+    /* .homeDesc {
         font-size: 1rem !important;
-    }
+    } */
 
     #homeImgContainer {
         margin: auto 1rem auto 1.8rem !important;
     }
 
     #about {
-        height: 4rem !important;
+        height: 8rem !important;
         margin-top: -6rem !important;
     }
 }
 
-@media only screen and (min-width : 600px) and (max-width : 768px) {
+@media only screen and (min-width : 600px) and (max-width : 900px) {
+    #homeContainer {
+        flex-wrap: nowrap !important;
+    }
+
     .homeHead {
-        font-size: 2rem !important;
-    }
-
-    .homeDesc {
-        font-size: 0.8rem !important;
-    }
-}
-
-@media only screen and (min-width : 992px) and (max-width : 1200px) {
-    #about {
-        margin-top: -8rem !important;
+        font-size: 4rem !important;
     }
 
     .homeDesc {
         font-size: 1rem !important;
     }
+}
+
+@media only screen and (min-width : 600px) and (max-width : 768px) {
+    .homeHead {
+        font-size: 3.5rem !important;
+    }
+
+    /* .homeDesc {
+        font-size: 0.8rem !important;
+    } */
+}
+
+@media only screen and (min-width : 900px) and (max-width : 1200px) {
+    /* #about {
+        margin-top: -8rem !important;
+    } */
+
+    .homeHead {
+        font-size: 5rem !important;
+    }
+
+    /* .homeDesc {
+        font-size: 1rem !important;
+    } */
 }

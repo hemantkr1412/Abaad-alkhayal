@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Card, CardMedia } from '@mui/material';
 import BitwalletImg from './assets/bitwallet3.jpg';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './BitSaudi.css'
 
 const BitWallet = () => {
+    useEffect(() => {
+        AOS.init({
+            offset: 150,
+            duration: 700,
+        });
+    }, [])
+
     return (
         <>
             <div id="bitwallet"></div>
             <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" className="mission">
-                <Grid item xs={12} sm={2} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
-                <Grid item xs={12} sm={6} md={4} id="solutionImgContainer">
+                <Grid item xs={12} sm={2} md={1} lg={2} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
+                <Grid item xs={12} sm={6} md={5} lg={4} id="solutionImgContainer">
                     <Typography variant="h4" gutterBottom sx={{
                         fontWeight: 'bold',
                         mb: 4,
@@ -22,7 +31,7 @@ const BitWallet = () => {
                     }} className="solution">
                         BitWallet
                     </Typography>
-                    <Card sx={{ boxShadow: 'none' }} className="solutionImgContainer">
+                    <Card sx={{ boxShadow: 'none' }} data-aos="fade-up" className="solutionImgContainer">
                         <CardMedia
                             component="img"
                             height="90%"
@@ -32,7 +41,7 @@ const BitWallet = () => {
                         />
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid item xs={12} sm={6} md={5} lg={4}>
                     <Box sx={{ textAlign: 'start', ml: { xs: 3, md: 0 }, pr: { xs: 3, md: 0 } }}>
                         <Typography variant="h4" gutterBottom sx={{
                             fontWeight: 'bold',
@@ -47,7 +56,7 @@ const BitWallet = () => {
                         <Link className="launchBtn" to="https://bitmemoirsaudi.netlify.app/#/bitwalletpage" target="_blank">Launch</Link>
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={2} sx={{ display: { xs: 'none', md: 'block' } }} ></Grid>
+                <Grid item xs={12} sm={2} md={1} lg={2} sx={{ display: { xs: 'none', md: 'block' } }} ></Grid>
             </Grid>
         </>
     )
