@@ -28,6 +28,7 @@ const Contact = () => {
 
     const [inputDetails, setInputDetails] = useState({})
     const [userQuery, setUserQuery] = useState([]);
+    const [dataAos, setDataAos] = useState('');
 
     const inputEvent = (e) => {
         const name = e.target.name;
@@ -39,6 +40,25 @@ const Contact = () => {
     const submitForm = () => {
         setUserQuery((prev) => [...userQuery, inputDetails])
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 400) {
+                setDataAos('fade-up');
+            } else {
+                setDataAos('zoom-in-left');
+            }
+        };
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
 
     return (
         <>
@@ -75,7 +95,7 @@ const Contact = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={5} lg={4} className="formOuterDiv">
-                    <Box component="div" className="formDiv" data-aos="zoom-in-left">
+                    <Box component="div" className="formDiv" data-aos={dataAos}>
                         <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', marginLeft: '2rem', marginTop: '1rem', color: 'black' }} >
                             Contact Us
                         </Typography>
@@ -88,16 +108,11 @@ const Contact = () => {
                                             <Select
                                                 labelId="demo-simple-select-standard-label"
                                                 id="demo-simple-select-standard"
-                                                // value={age}
-                                                // onChange={handleChange}
                                                 label="Purpose"
                                                 name="Purpose"
                                                 sx={{ minWidth: 195 }}
                                                 onChange={inputEvent}
                                             >
-                                                {/* <MenuItem value="">
-                                                    <em>None</em>
-                                                </MenuItem> */}
                                                 <MenuItem value="Work with us">Work with us</MenuItem>
                                                 <MenuItem value="Product or Service Information">Product or Service Information</MenuItem>
                                                 <MenuItem value="Partnership or Collaboration">Partnership or Collaboration</MenuItem>

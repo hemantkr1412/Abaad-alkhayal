@@ -88,13 +88,14 @@
     .aboutImgContainer {
         height: 17rem;
         width: 90%;
-        /* margin: auto; */
-        margin-left: 1.5rem;
+        margin: auto;
+        /* margin-left: 1.5rem; */
     }
 
-    /* .aboutBox {
-        margin-left: 1rem !important;
-    } */
+    .aboutBox {
+        /* margin-left: 1rem !important; */
+        margin: 0 1rem;
+    }
 
     .aboutHead {
         font-size: 2.2rem !important;

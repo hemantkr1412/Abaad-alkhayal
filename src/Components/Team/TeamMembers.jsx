@@ -40,7 +40,7 @@ export const TeamMembers = [
         id: 5,
         img: team_member_7,
         name: 'Dr. Radhika Mahajan',
-        designation: 'Program Coordinator'
+        designation: 'Program Manager'
     },
     {
         id: 6,

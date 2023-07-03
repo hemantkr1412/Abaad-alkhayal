@@ -25,9 +25,9 @@
         height: 4rem;
     }
 
-    #homeImg {
-        margin: 0 -2rem 0 1rem;
-    }
+    /* #homeImg {
+        margin: 0 0rem 0 1rem;
+    } */
 
     .homeTextBox {
         margin-top: 3rem !important;
@@ -49,11 +49,11 @@
     }
 }
 
-@media only screen and (max-width : 400px) {
+/* @media only screen and (max-width : 400px) {
     #about {
         height: 16rem !important;
     }
-}
+} */
 
 @media only screen and (min-width : 600px) and (max-width : 992px) {
     .homeHead {

@@ -99,13 +99,12 @@ export default function Navbar() {
                 <CssBaseline />
                 <AppBar component="nav"
                     sx={{
-                        // background: "transparent",
                         // border: '2px solid red',
                         zIndex: 10,
                         boxShadow: "none",
                         background: scroll ? "#343A4B" : "transparent",
-                        position: 'fixed', // Add this line
-                        top: 0, // Add this line
+                        position: 'fixed',
+                        top: 0,
                     }}>
                     <Toolbar>
                         <IconButton

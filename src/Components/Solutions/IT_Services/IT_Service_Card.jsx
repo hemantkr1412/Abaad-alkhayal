@@ -23,9 +23,9 @@ export default function IT_Service_Card(props) {
     }, [])
     return (
         <Card sx={{
+            // border: '2px solid red',
             maxWidth: 345,
             height: '100%',
-            // border: '2px solid red',
             textAlign: 'center',
             padding: '1rem',
             boxShadow: '0px 4px 12px rgba(12, 68, 204, 0.1)',

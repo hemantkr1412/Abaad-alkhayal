@@ -62,7 +62,7 @@ const Home = () => {
                             textAlign: 'justify',
                             color: 'white',
                         }}>
-                            Saudi-based software company
+                            A Saudi-based software company
                         </Typography>
                     </Box>
                 </Grid>
@@ -81,7 +81,6 @@ const Home = () => {
                 </Grid>
                 <Grid item xs={12} sm={1} sx={{ display: { xs: 'none', sm: 'block' } }}></Grid>
             </Grid >
-            {/* <div id="about"></div> */}
         </>
     )
 }

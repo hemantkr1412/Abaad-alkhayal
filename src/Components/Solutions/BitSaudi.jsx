@@ -89,12 +89,6 @@ const BitSaudi = () => {
                                 </>
                             )}
                         </Typography>
-                        {/* {!showFullText && (
-                            <Button variant="text" onClick={toggleText}>Read more</Button>
-                        )}
-                        {showFullText && (
-                            <Button variant="text" onClick={toggleText}>Read less</Button>
-                        )} */}
                         <Link className="launchBtn" to="https://bitmemoirsaudi.netlify.app/" target="_blank">Launch</Link>
                     </Box>
                 </Grid>

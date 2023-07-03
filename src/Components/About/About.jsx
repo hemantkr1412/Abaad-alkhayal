@@ -18,15 +18,11 @@ const About = () => {
     }, [])
     return (
         <>
-
             {/* ABOUT SECTION */}
 
             <div id="about"></div>
 
-            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" className="mission" sx={{
-                mb: 5,
-                // border: '2px solid red'
-            }}>
+            <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" className="mission" sx={{ mb: 5 }}>
                 <Grid item xs={12} sm={2} md={1} lg={2} sx={{ display: { xs: 'none', md: 'block' } }}></Grid>
 
                 <Grid item xs={12} sm={6} md={5} lg={4} className="imgContainer" sx={{
@@ -80,15 +76,6 @@ const About = () => {
                     // border: '2px solid red',
                     display: { xs: 'none', sm: 'block' }
                 }}>
-                    {/* <Typography variant="h3" gutterBottom sx={{
-                        fontWeight: 'bold',
-                        mb: 4,
-                        display: { xs: 'none', sm: 'block' },
-                        textAlign: 'center',
-                        color: 'white'
-                    }} className="aboutHead">
-                        Who We Are
-                    </Typography> */}
                     <Card sx={{ boxShadow: 'none' }} data-aos="fade-up" className="aboutImgContainer">
                         <CardMedia
                             component="img"

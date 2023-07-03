@@ -21,6 +21,12 @@
 
 /* MEDIA QUERY */
 
+@media only screen and (max-width : 400px) {
+    .cardContent {
+        padding: 8px !important;
+    }
+}
+
 @media only screen and (max-width : 600px) {
     .serviceCardContainerDiv {
         padding: 0 1rem 0 2.5rem !important;

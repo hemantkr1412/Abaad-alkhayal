@@ -48,8 +48,6 @@ export const IT_Service_Card_Data = [
         id: 6,
         img: vector6,
         title: 'Digital Transformation',
-        // desc: `Embrace technology
-        //        Access, improve & implement digital solutions`
         desc: 'Analyze and improve your existing IT ecosystem to reduce costs, optimize efficiency, and add value through improved solutions.'
     }
 ];
