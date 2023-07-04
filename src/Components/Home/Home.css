@@ -25,9 +25,9 @@
         height: 4rem;
     }
 
-    /* #homeImg {
-        margin: 0 0rem 0 1rem;
-    } */
+    #homeImg {
+        margin-left: 1rem;
+    }
 
     .homeTextBox {
         margin-top: 3rem !important;
@@ -50,11 +50,6 @@
 }
 
 @media only screen and (max-width : 400px) {
-    #homeImg {
-        background-size: contain !important;
-        margin-left: 1rem;
-    }
-
     .homeTextBox {
         margin-top: 0 !important;
     }

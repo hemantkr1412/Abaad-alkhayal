@@ -32,7 +32,7 @@ const Home = () => {
                         height: '68%',
                         backgroundImage: `url(${home})`,
                         backgroundPosition: 'center',
-                        backgroundSize: 'cover',
+                        backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'block', sm: 'none' },
                         // '@media (maxWidth: 900px)': { xs: 6 }
