@@ -37,11 +37,6 @@
 /* MEDIA QUERY */
 
 @media only screen and (max-width : 600px) {
-    .aboutImg {
-        width: 80% !important;
-        margin: auto;
-    }
-
     .solutionHead {
         font-size: 2.3rem !important;
         margin: 0 !important;

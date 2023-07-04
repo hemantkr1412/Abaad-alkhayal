@@ -32,7 +32,7 @@
 }
 
 
-
+/* MEDIA QUERY */
 
 @media only screen and (min-width : 600px) and (max-width : 768px) {
 
@@ -104,6 +104,19 @@
     .imgContainer {
         flex-direction: column !important;
         align-items: center;
+    }
+
+    .aboutImg {
+        width: 100% !important;
+        margin: auto;
+    }
+}
+
+
+
+@media only screen and (max-width : 400px) {
+    #about {
+        height: 5rem !important;
     }
 }
 

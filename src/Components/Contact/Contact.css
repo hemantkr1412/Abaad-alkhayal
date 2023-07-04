@@ -54,7 +54,8 @@
     width: 6rem;
     background: var(--primary) !important;
     color: white !important;
-    margin-left: auto !important;
+    float: right;
+    /* margin-left: auto !important; */
 }
 
 /* MEDIA QUERY */

@@ -20,7 +20,6 @@ const navItems = ['Home', 'About', 'Solutions', 'Team', 'Contact'];
 
 export default function Navbar() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    // const [anchorEl, setAnchorEl] = useState(null);
     const [scroll, setScroll] = useState(false);
     const [isMouseEnter, setIsMouseEnter] = useState(false);
 

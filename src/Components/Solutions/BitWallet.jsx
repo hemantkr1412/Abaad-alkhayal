@@ -12,8 +12,8 @@ import './BitSaudi.css'
 const BitWallet = () => {
     useEffect(() => {
         AOS.init({
-            offset: 150,
-            duration: 700,
+            offset: 80,
+            duration: 300,
         });
     }, [])
 
@@ -31,7 +31,7 @@ const BitWallet = () => {
                     }} className="solution">
                         BitWallet
                     </Typography>
-                    <Card sx={{ boxShadow: 'none' }} data-aos="fade-up" className="solutionImgContainer">
+                    <Card sx={{ boxShadow: 'none' }} className="solutionImgContainer">
                         <CardMedia
                             component="img"
                             height="90%"

@@ -72,7 +72,7 @@ const Home = () => {
                         // border: '2px solid yellow',
                         // marginTop: '2rem',
                         backgroundImage: `url(${home})`,
-                        backgroundPosition: window.innerWidth < 1200 ? 'center' : 'center',
+                        backgroundPosition: 'center',
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat',
                         display: { xs: 'none', sm: 'block' },

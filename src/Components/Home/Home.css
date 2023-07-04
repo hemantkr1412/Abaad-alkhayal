@@ -49,11 +49,16 @@
     }
 }
 
-/* @media only screen and (max-width : 400px) {
-    #about {
-        height: 16rem !important;
+@media only screen and (max-width : 400px) {
+    #homeImg {
+        background-size: contain !important;
+        margin-left: 1rem;
     }
-} */
+
+    .homeTextBox {
+        margin-top: 0 !important;
+    }
+}
 
 @media only screen and (min-width : 600px) and (max-width : 992px) {
     .homeHead {
