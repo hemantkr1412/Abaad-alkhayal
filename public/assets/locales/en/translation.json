@@ -1,0 +1,114 @@
+{
+	"navbar": {
+		"home": "Home",
+		"about": "About",
+		"solutions": {
+			"heading": "Solutions",
+			"itservices": "IT Services"
+		},
+		"team": "Team",
+		"contact": "Contact"
+	},
+	"mainHeading": "Aba'ad Alkhayal",
+	"mainSubHeading": "A Saudi-based software company",
+	"whoWeAre": {
+		"heading": "Who We Are",
+		"text": "We are a Saudi-based software company that leverages the latest technologies like blockchain and artificial intelligence to help businesses thrive in the digital age. With a passion for innovation and a drive to surpass limits, we deliver unparalleled solutions that empower enterprises to reach new heights. Combining technical prowess with creative flair, we bring forth transformative experiences that unlock your business's true potential. Join us on an exciting journey to break new ground in the digital realm."
+	},
+	"ourMission": {
+		"heading": "Our Mission",
+		"text": "Our mission is to empower individuals, organizations and communities with transformative technological solutions, such as artificial intelligence and blockchain. We make a positive social impact by being at the forefront of technological innovation and striving to create a better future through technology. As your tech partner, we're committed to identifying problem areas and collaborating with our clients to ideate, develop and deploy solutions that will help resolve them. Whether it's through AI-powered automation or blockchain-enabled data security, we're here to support you every step of the way. Join us in shaping the future of technology, and start building a better tomorrow today."
+	},
+	"ourSolutions": {
+		"heading": "Our Solutions",
+		"launch": "Launch",
+		"bitmemoirSaudi": {
+			"heading": "BitMemoir Saudi",
+			"textShort": "Our BitMemoir is an NFT-utility platform designed to address the widespread issues of counterfeit documents and identity theft. By harnessing the immutable properties of blockchain technology, BitMemoir offers a comprehensive solution that caters to a variety of needs. Our platform enables the creation of secure and verifiable digital credentials, such as Skills Passport and Medical Passport, as well as providing NFTs for souvenirs, Warranty/Guarantee Cards, and Loyalty Programs.",
+			"textLong": "Our BitMemoir is an NFT-utility platform designed to address the widespread issues of counterfeit documents and identity theft. By harnessing the immutable properties of blockchain technology, BitMemoir offers a comprehensive solution that caters to a variety of needs. Our platform enables the creation of secure and verifiable digital credentials, such as Skills Passport and Medical Passport, as well as providing NFTs for souvenirs, Warranty/Guarantee Cards, and Loyalty Programs. What sets BitMemoir apart is its user-friendly and customizable approach. Our plug and play system allows for effortless integration and adoption within different industries and organizations. With a reliable and decentralized infrastructure, we are paving the way for a future built on trust and transparency. Whether you are an individual or a business, our platform empowers you to confidently manage your digital identity, while minimizing the risks associated with counterfeit documents and identity theft. Join us in shaping a safer and more secure digital future. Together, we can create a world where authenticity is assured and identities are protected.",
+			"readLess": "Read Less",
+			"readMore": "Read More"
+		},
+		"bitWallet": {
+			"heading": "BitWallet",
+			"textShort": "BitWallet is an innovative digital wallet that offers a safe and effortless way to manage your digital assets. With BitWallet, you can easily store, transfer, and receive NFTs through an easy-to-use interface. Additionally, our digital wallet integrates seamlessly with leading decentralized applications and DeFi platforms, which means you can easily access a range of financial services and participate in tokenized ecosystems. Trust us to provide a secure and efficient method of managing your digital wealth."
+		},
+		"coreServices": {
+			"heading": "Our Core Services",
+			"subHeading": "We offer wide range of comprehensive IT services and deliver tailor-made, robust, and scalable solutions to meet unique needs of businesses.",
+			"services": {
+				"DecentralizedPlatforms": {
+					"heading": "Decentralized Platforms",
+					"text": "Decentralized control, Transparent secure, Encourage innovation, collaboration, and inclusivity."
+				},
+				"ProprietaryBlockchainSolutions": {
+					"heading": "Proprietary Blockchain Solutions",
+					"text": "Cross-platform apps, End-to-end development."
+				},
+				"AppDevelopment": {
+					"heading": "App Development",
+					"text": "Enhanced control, Tailored Applications, Plug-and-play solutions and API integrations."
+				},
+				"NFT-basedLoyaltyProgrammes": {
+					"heading": "NFT-based Loyalty Programmes",
+					"text": "Transparent & secure rewards, Memorable token experience, Boost engagement & loyalty."
+				},
+				"ManagementInformationSystems": {
+					"heading": "Management Information Systems (MIS)",
+					"text": "Streamlined operations, Real-time and accurate data analysis, reporting, and forecasting."
+				},
+				"DigitalTransformation": {
+					"heading": "Digital Transformation",
+					"text": "Analyze and improve your existing IT ecosystem to reduce costs, optimize efficiency, and add value through improved solutions."
+				}
+			}
+		}
+	},
+	"getToKnowUsCloser": {
+		"heading": "Get To Know Us Closer",
+		"subheading": "Highly skilled professionals with extensive expertise in technology, innovation, and business, dedicated to driving digital transformation and exceeding client expectations.",
+		"designations": {
+			"cofounder": "Co-Founder",
+			"ceo": "CEO",
+			"publicRelationsManager": "Public Relations Manager",
+			"technology": "Technology",
+			"programManager": "Program Manager",
+			"businessDevelopmentSpecialist": "Business Development Specialist",
+			"accountantSpecialist": "Accountant Specialist"
+		},
+		"names": {
+			"name1": "Princess Hesah Al Saud",
+			"name2": "Dr. Sajjadllah Alhawsawi",
+			"name3": "Mr Bander Al Barrak",
+			"name4": "Nikhil Goyal",
+			"name5": "Dr. Radhika Mahajan",
+			"name6": "Ms Sarah Al-Qurni",
+			"name7": "Ms Shad Al-Qurni"
+		}
+	},
+	"contact": {
+		"heading": "Feel Free to reach out for further details",
+		"emailAddress": "Email Address",
+		"addressHeading": "Address",
+		"address": "Riyadh 2955, Kingdom of Saudi Arabia",
+		"name": "Name",
+		"namePlaceholder": "Andrea",
+		"email": "Email",
+		"emailPlaceholder": "andrea@gmail.com",
+		"purpose": {
+			"heading": "Purpose",
+			"workWithUs": "Work With Us",
+			"productServiceInfo": "Product or Service Information",
+			"partnershipCollaboration": "Partnership or Collaboration",
+			"feedbackSuggestion": "Feedback or Suggestion",
+			"others": "Others"
+		},
+		"purposePlaceholder": "Select Purpose",
+		"message": "Message",
+		"messagePlaceholder": "Your Message",
+		"send": "Send",
+		"contactUs": "Contact Us"
+	},
+	"formSubmittedMessage": "Your Form is submitted successfully",
+	"copyright": "© 2023 Aba'ad Alkhayal. All rights reserved."
+}
