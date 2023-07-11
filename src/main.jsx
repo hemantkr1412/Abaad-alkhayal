@@ -24,7 +24,7 @@ i18next
 		// react: { useSuspense: false },
 		backend: {
 			// loadPath: "/assets/locales/{{lng}}/translation.json",
-			loadPath: "/public/assets/locales/{{lng}}/translation.json",
+			loadPath: "/assets/locales/{{lng}}/translation.json",
 		},
 	});
 ReactDOM.createRoot(document.getElementById("root")).render(
