@@ -216,7 +216,7 @@ export default function Navbar() {
 															handleMouseLeave
 														}
 														style={{
-															// height: "2rem",
+															height: "2rem",
 															display: "flex",
 															alignItems:
 																"center",
