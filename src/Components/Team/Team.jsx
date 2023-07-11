@@ -134,7 +134,7 @@ const Team = () => {
 										alignItems: "stretch",
 									}}>
 									<TeamCard
-										img={member.img}
+										// img={member.img}
 										name={member.name}
 										designation={member.designation}
 									/>

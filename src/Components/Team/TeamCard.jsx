@@ -25,7 +25,7 @@ export default function TeamCard(props) {
 			}}
 			data-aos="fade-up"
 			className="teamCard">
-			<CardMedia
+			{/* <CardMedia
 				component="img"
 				// height="350"
 				// style={{
@@ -34,7 +34,7 @@ export default function TeamCard(props) {
 				// alt="green iguana"
 				// image={props.img}
 				className="teamImg"
-			/>
+			/> */}
 			<CardContent className="teamInfoCard">
 				<Typography
 					gutterBottom
