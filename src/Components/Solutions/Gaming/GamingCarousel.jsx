@@ -4,11 +4,36 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import './GamingCarousel.css';
 
-const Item = ({ title, img, level }) => {
+const Item = ({ title, img, level, state, setState }) => {
     const className = `item level${level}`;
     return (
-        <CSSTransition timeout={1000} classNames="slide">
-            <div className={className}>
+        <CSSTransition
+            timeout={1000}
+            classNames={state.direction === 'right' ? 'slide' : 'slide-left'}
+        >
+            <div className={className} onClick={() => {
+                console.log(`card clicks ${state.active} ${level}`);
+                if (level < 0) {
+                    const newActive = state.active;
+                    console.log(newActive);
+                    setState({
+                        ...state,
+                        active: (newActive + Math.abs(level)) % state.items.length,
+                        direction: 'right'
+                    });
+                }
+                else {
+                    let newActive = state.active;
+                    console.log(`newActive before ${newActive}`);
+                    newActive -= level;
+                    console.log(`newActive after ${newActive}`);
+                    setState({
+                        ...state,
+                        active: newActive < 0 ? state.items.length - 1 : newActive,
+                        direction: 'left'
+                    });
+                }
+            }}>
                 <img src={img} alt={title} style={{
                     height: '100%',
                     width: '100%'
@@ -40,8 +65,9 @@ const GamingCarousel = ({ items, active }) => {
 
     const leftClick = () => {
         let newActive = state.active;
-        console.log(newActive);
+        console.log(`newActive before ${newActive}`);
         newActive--;
+        console.log(`newActive after ${newActive}`);
         setState({
             ...state,
             active: newActive < 0 ? state.items.length - 1 : newActive,
@@ -61,12 +87,15 @@ const GamingCarousel = ({ items, active }) => {
                 index = i % state.items.length;
             }
             level = state.active - i;
-            itemsArray.push(<Item
-                key={index}
-                title={state.items[index].title} // Use the title property of the object
-                img={state.items[index].img} // Use the img property of the object
-                level={level}
-            />
+            itemsArray.push(
+                <Item
+                    key={index}
+                    title={state.items[index].title}
+                    img={state.items[index].img}
+                    level={level}
+                    state={state}
+                    setState={setState}
+                />
             );
         }
         return itemsArray;
@@ -74,20 +103,23 @@ const GamingCarousel = ({ items, active }) => {
 
     return (
         <div id="carousel" className="noselect">
-            <div className="arrow arrow-left" onClick={leftClick}>
+            {/* <div className="arrow arrow-left" onClick={leftClick}>
                 <ChevronLeftIcon className="carouselIcon" />
-            </div>
+            </div> */}
             <TransitionGroup
                 component={null}
                 childFactory={(child) => React.cloneElement(child, {
                     classNames: state.direction
                 })}
+            // childFactory={(child) => React.cloneElement(child, {
+            //     classNames: state.direction === 'right' ? 'slide' : 'slide-left' // Conditionally set the animation class
+            // })}
             >
                 {generateItems()}
             </TransitionGroup>
-            <div className="arrow arrow-right" onClick={rightClick}>
+            {/* <div className="arrow arrow-right" onClick={rightClick}>
                 <KeyboardArrowRightIcon className="carouselIcon" />
-            </div>
+            </div> */}
         </div>
     );
 };

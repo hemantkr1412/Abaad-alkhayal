@@ -99,7 +99,7 @@ const BitSaudi = () => {
 								display: { xs: "none", sm: "block" },
 							}}
 							className="solution">
-							BitMemoir Saudi
+							{t("ourSolutions.bitmemoirSaudi.heading")}
 						</Typography>
 						<Typography
 							sx={{

@@ -21,35 +21,33 @@ import { useTranslation } from "react-i18next";
 import "./Gaming.css";
 
 const Gaming = () => {
-    // const [currentSlide, setCurrentSlide] = useState(0);
-    const [centeredCard, setCenteredCard] = useState(0);
-
     const { t } = useTranslation();
 
     const sliderItems = [
-        { title: "Engineering", img: engineering },
-        { title: "Medical", img: medical },
-        { title: "Ecommerce", img: ecommerce },
-        { title: "Gaming", img: gaming },
-        { title: "Entertainment", img: entertainment },
+        { title: t("ourSolutions.gaming.application.engineering"), img: engineering },
+        { title: t("ourSolutions.gaming.application.medical"), img: medical },
+        { title: t("ourSolutions.gaming.application.ecommerce"), img: ecommerce },
+        { title: t("ourSolutions.gaming.application.gaming"), img: gaming },
+        { title: t("ourSolutions.gaming.application.entertainment"), img: entertainment },
         // { title: "Entertainment", img: gaming },
         // { title: "Entertainment", img: gaming },
         // { title: "Entertainment", img: gaming },
     ];
 
-    const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (
         <>
-            {/* <div className="gamingOverlay"></div> */}
+            <div id="gaming"></div>
             <div className="gamingDiv serviceDiv gamingOverlay" style={{
                 backgroundImage: `url(${gamingBg})`,
                 backgroundPosition: 'left',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                margin: '6rem 0'
+                marginBottom: '6rem',
+                padding: '5rem'
             }}>
-                <h1>Gaming/Metaverse</h1>
+                <h1>{t("ourSolutions.gaming.heading")}</h1>
                 <Grid
                     container
                     spacing={{ xs: 3, md: 3 }}
@@ -83,8 +81,7 @@ const Gaming = () => {
                                 gutterBottom
                                 className="solutionInfo">
                                 {/* {t("copyright")} */}
-                                Innovation and immersive experiences are at the forefront of all we do at Abaad Alkhayal. Our team of professionals is committed to expanding the realm of what is practical and charting the course for gaming and the metaverse in the future.
-                                We have constructed the strong infrastructure that has hosted more than 500 games over the years. We are a team of exceptional strategic professionals with talents in art, design, engineering, and programming. Our company works with clients as partners rather than just as customers.
+                                {t("ourSolutions.gaming.text")}
                             </Typography>
                         </Box>
                     </Grid>
@@ -96,59 +93,7 @@ const Gaming = () => {
                         lg={2}
                         sx={{ display: { xs: "none", md: "block" } }}></Grid>
                 </Grid>
-
             </div>
-
-
-            {/* <Grid container spacing={2}
-                className="slider-container"
-                sx={{
-                    justifyContent: 'center',
-                    width: '100vw'
-                }}>
-                {sliderItems.map((item, index) => (
-                    <Card
-                        sx={{
-                            maxWidth: cardWidth,
-                            height: 300,
-                            transition: "transform 0.3s ease",
-                            cursor: "pointer",
-                            transform: `translateX(calc(${(index - centeredCard) * (cardWidth + spacing)}px))`,
-                            zIndex: centeredCard === index ? 1 : 'auto',
-                        }}
-                        className={`slider-card ${centeredCard === index ? 'centered' : ''}`}
-                        onClick={() => handleCardClick(index)}
-                    >
-                        <CardActionArea sx={{ height: '100%' }}>
-                            <CardMedia
-                                component="img"
-                                height="100%"
-                                image={item.img}
-                                alt="green iguana"
-                                sx={{ objectFit: 'cover' }}
-                                className="sliderImg"
-                            />
-                            <Box
-                                sx={{
-                                    position: 'absolute',
-                                    top: '20%',
-                                    left: '50%',
-                                    transform: 'translate(-50%, -50%)',
-                                    background: 'rgba(0, 0, 0, 0.5)',
-                                    padding: '8px 16px',
-                                    borderRadius: '8px',
-                                    color: 'white',
-                                }}
-                                className="sliderCaption"
-                            >
-                                <Typography variant="h6" component="div">
-                                    {item.title}
-                                </Typography>
-                            </Box>
-                        </CardActionArea>
-                    </Card>
-                ))}
-            </Grid> */}
 
             <GamingCarousel items={sliderItems} active={0} />
         </>

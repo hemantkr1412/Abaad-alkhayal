@@ -29,7 +29,7 @@ const Dropdown = ({ handleMouseLeave, setMobileOpen }) => {
 								setMobileOpen(false);
 							}}
 							className="dropdownLinks">
-							BitSaudi
+							{t("navbar.solutions.bitsaudi")}
 						</a>
 
 						<a
@@ -39,16 +39,16 @@ const Dropdown = ({ handleMouseLeave, setMobileOpen }) => {
 								setMobileOpen(false);
 							}}
 							className="dropdownLinks">
-							BitWallet
+							{t("navbar.solutions.bitwallet")}
 						</a>
 						<a
-							href="#bitwallet"
+							href="#gaming"
 							onClick={() => {
 								handleMouseLeave();
 								setMobileOpen(false);
 							}}
 							className="dropdownLinks">
-							Gaming
+							{t("navbar.solutions.gaming")}
 						</a>
 
 						<a

@@ -36,7 +36,8 @@
     font-size: 40px;
     position: relative;
     /* position: absolute; */
-    margin: 0 1rem;
+    margin: 0 8px;
+    cursor: pointer;
     transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s;
 }
 
@@ -56,6 +57,7 @@
     border-radius: 13px;
 }
 
+
 .level-2 {
     /* height: 150px;
     width: 110px; */
@@ -66,7 +68,6 @@
     /* line-height: 150px; */
     line-height: 15rem;
     margin-top: 60px;
-    /* position: relative; */
 }
 
 .level-1 {
@@ -78,7 +79,6 @@
     /* left: -10px; */
     line-height: 18rem;
     margin-top: 32px;
-    /* position: relative; */
 }
 
 .level0 {
@@ -90,7 +90,6 @@
     /* left: 10px; */
     /* line-height: 200px; */
     line-height: 20rem;
-    /* position: relative; */
 }
 
 .level1 {
@@ -103,7 +102,6 @@
     /* line-height: 180px; */
     line-height: 18rem;
     margin-top: 32px;
-    /* position: relative; */
 }
 
 .level2 {
@@ -116,7 +114,6 @@
     /* line-height: 150px; */
     line-height: 15rem;
     margin-top: 60px;
-    /* position: relative; */
 }
 
 .noselect {
