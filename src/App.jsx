@@ -4,6 +4,7 @@ import Home from './Components/Home/Home.jsx';
 import Floater from './Components/Floater/Floater.jsx';
 import BitSaudi from './Components/Solutions/BitSaudi.jsx';
 import BitWallet from './Components/Solutions/BitWallet.jsx';
+import Gaming from './Components/Solutions/Gaming/Gaming.jsx';
 import IT_Services from './Components/Solutions/IT_Services/IT_Services.jsx';
 import About from './Components/About/About.jsx';
 import Team from './Components/Team/Team.jsx';
@@ -22,6 +23,7 @@ function App() {
       <About />
       <BitSaudi />
       <BitWallet />
+      <Gaming />
       <IT_Services />
       <Team />
       <Contact />

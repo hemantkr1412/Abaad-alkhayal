@@ -210,7 +210,7 @@ const Contact = () => {
 											{elem.label}
 										</InputLabel>
 										{elem.label ===
-										t("contact.purpose.heading") ? (
+											t("contact.purpose.heading") ? (
 											<Select
 												labelId="demo-simple-select-standard-label"
 												id="demo-simple-select-standard"

@@ -151,11 +151,7 @@ const About = () => {
 				spacing={{ xs: 3, md: 3 }}
 				justifyContent="center"
 				className="mission"
-				sx={
-					{
-						// border: '2px solid red',
-					}
-				}>
+			>
 				<Grid
 					item
 					xs={12}

@@ -1,0 +1,128 @@
+#carousel {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #228291;
+    line-height: 52px;
+    margin-top: 10rem;
+    z-index: 1000;
+}
+
+.carouselIcon {
+    transform: scale(1.2);
+}
+
+.arrow-left {
+    left: 5rem;
+}
+
+.arrow-right {
+    right: 5rem;
+}
+
+.item {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: relative;
+    /* position: absolute; */
+    margin: 0 1rem;
+    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s;
+}
+
+.item-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    width: 100%;
+}
+
+.titleText {
+    background: #00000096;
+    padding: 0.7rem 1rem;
+    border-radius: 13px;
+}
+
+.level-2 {
+    /* height: 150px;
+    width: 110px; */
+    height: 14rem;
+    width: 20%;
+    /* left: 650px; */
+    /* left: -30px; */
+    /* line-height: 150px; */
+    line-height: 15rem;
+    margin-top: 60px;
+    /* position: relative; */
+}
+
+.level-1 {
+    /* height: 180px;
+    width: 130px; */
+    height: 17rem;
+    width: 23%;
+    /* left: 500px; */
+    /* left: -10px; */
+    line-height: 18rem;
+    margin-top: 32px;
+    /* position: relative; */
+}
+
+.level0 {
+    /* height: 200px;
+    width: 150px; */
+    height: 20rem;
+    width: 25%;
+    /* left: 330px; */
+    /* left: 10px; */
+    /* line-height: 200px; */
+    line-height: 20rem;
+    /* position: relative; */
+}
+
+.level1 {
+    /* height: 180px;
+    width: 130px; */
+    height: 17rem;
+    width: 23%;
+    /* left: 180px; */
+    /* left: 30px; */
+    /* line-height: 180px; */
+    line-height: 18rem;
+    margin-top: 32px;
+    /* position: relative; */
+}
+
+.level2 {
+    /* height: 150px;
+    width: 110px; */
+    height: 14rem;
+    width: 20%;
+    /* left: 50px; */
+    /* left: 50px; */
+    /* line-height: 150px; */
+    line-height: 15rem;
+    margin-top: 60px;
+    /* position: relative; */
+}
+
+.noselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -41,6 +41,15 @@ const Dropdown = ({ handleMouseLeave, setMobileOpen }) => {
 							className="dropdownLinks">
 							BitWallet
 						</a>
+						<a
+							href="#bitwallet"
+							onClick={() => {
+								handleMouseLeave();
+								setMobileOpen(false);
+							}}
+							className="dropdownLinks">
+							Gaming
+						</a>
 
 						<a
 							href="#itservices"
