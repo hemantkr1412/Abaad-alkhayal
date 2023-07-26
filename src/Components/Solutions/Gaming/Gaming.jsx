@@ -2,20 +2,12 @@ import React, { useState } from 'react';
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
-import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
-// import gaming from './assets/gaming.png'
-import gaming from './assets/gaming.jpg'
-import medical from './assets/medical.jpg'
-import engineering from './assets/engineering-2.jpeg'
-import entertainment from './assets/music.jpg'
-import ecommerce from './assets/ecommerce-2.jpeg'
-import gamingBg from './assets/gaming-bg.jpg'
-import { Link } from "react-router-dom";
+import gaming from './assets/gaming.jpg';
+import medical from './assets/medical.jpg';
+import engineering from './assets/engineering-2.jpeg';
+import entertainment from './assets/music.jpg';
+import ecommerce from './assets/ecommerce-2.jpeg';
+import gamingBg from './assets/gaming-bg.jpg';
 import GamingCarousel from './GamingCarousel';
 import { useTranslation } from "react-i18next";
 import "./Gaming.css";
@@ -45,7 +37,7 @@ const Gaming = () => {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 marginBottom: '6rem',
-                padding: '5rem'
+                padding: '5rem 0'
             }}>
                 <h1>{t("ourSolutions.gaming.heading")}</h1>
                 <Grid
