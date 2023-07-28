@@ -87,8 +87,11 @@
 			"publicRelationsManager": "Public Relations Manager",
 			"technology": "Technology",
 			"programManager": "Program Manager",
+			"salesManager":"Sales Manager",
 			"businessDevelopmentSpecialist": "Business Development Specialist",
-			"accountantSpecialist": "Accountant Specialist"
+			"accountantSpecialist": "Accountant Specialist",
+			"hr": "Human Resource",
+			"blockchainDeveloper": "Blockchain Developer"
 		},
 		"names": {
 			"name1": "Princess Hesah Al Saud",
@@ -96,8 +99,14 @@
 			"name3": "Mr Bander Al Barrak",
 			"name4": "Nikhil Goyal",
 			"name5": "Dr. Radhika Mahajan",
-			"name6": "Ms Sarah Al-Qurni",
-			"name7": "Ms Shad Al-Qurni"
+			"name6": "Mr. Anas Mohammed",
+			"name7": "Ms Sarah Al-Qurni",
+			"name8": "Ms Shad Al-Qurni",
+			"name9": "Kavya GN",
+			"name10": "Navraj Sharma",
+			"name11": "Shubham Jaiswal",
+			"name12": "Hemant Kumar",
+			"name13": "Vivek Tyagi"
 		}
 	},
 	"contact": {

@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import "./Team.css";
 
 export default function TeamCard(props) {
+	// console.log(props);
 	useEffect(() => {
 		AOS.init({
 			offset: 100,
@@ -25,16 +26,16 @@ export default function TeamCard(props) {
 			}}
 			data-aos="fade-up"
 			className="teamCard">
-			{/* <CardMedia
+			<CardMedia
 				component="img"
-				// height="350"
-				// style={{
-				// 	height: window.innerWidth < 600 ? "230px" : "270px",
-				// }}
-				// alt="green iguana"
-				// image={props.img}
+				height="350"
+				style={{
+					height: window.innerWidth < 600 ? "230px" : "270px",
+				}}
+				alt={props.name}
+				image={props.img}
 				className="teamImg"
-			/> */}
+			/>
 			<CardContent className="teamInfoCard">
 				<Typography
 					gutterBottom
