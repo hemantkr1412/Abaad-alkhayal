@@ -161,9 +161,9 @@ const Contact = () => {
 						<Box sx={{ mt: 4 }}>
 							<p>{t("contact.emailAddress")}</p>
 							<a
-								href="mailto: support@beimagine.tech"
+								href="mailto: sales@abaadalkhayal.com"
 								className="contactLink">
-								support@beimagine.tech
+								sales@abaadalkhayal.com
 							</a>
 						</Box>
 						<Box sx={{ mt: 4 }}>

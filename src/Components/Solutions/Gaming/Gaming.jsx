@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import gaming from './assets/gaming.jpg';
 import medical from './assets/medical.jpg';
 import engineering from './assets/engineering-2.jpeg';
-import entertainment from './assets/music.jpg';
+import architecture from './assets/architecture.jpeg';
 import ecommerce from './assets/ecommerce-2.jpeg';
 import gamingBg from './assets/gaming-bg.jpg';
 import GamingCarousel from './GamingCarousel';
@@ -20,7 +20,7 @@ const Gaming = () => {
         { title: t("ourSolutions.gaming.application.medical"), img: medical },
         { title: t("ourSolutions.gaming.application.ecommerce"), img: ecommerce },
         { title: t("ourSolutions.gaming.application.gaming"), img: gaming },
-        { title: t("ourSolutions.gaming.application.entertainment"), img: entertainment },
+        { title: t("ourSolutions.gaming.application.architecture"), img: architecture },
         // { title: "Entertainment", img: gaming },
         // { title: "Entertainment", img: gaming },
         // { title: "Entertainment", img: gaming },
