@@ -281,7 +281,7 @@ const Contact = () => {
 				}}
 				open={open}
 				autoHideDuration={1500}
-				message={t("formSubmittedSuccessfully")}
+				// message={t("formSubmittedSuccessfully")}
 				sx={{
 					"& .MuiSnackbarContent-root": {
 						backgroundColor: "#4caf50",

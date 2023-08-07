@@ -12,7 +12,7 @@ import GamingCarousel from './GamingCarousel';
 import { useTranslation } from "react-i18next";
 import "./Gaming.css";
 
-const Gaming = () => {
+const Gaming = ({ lang }) => {
     const { t } = useTranslation();
 
     const sliderItems = [
@@ -67,7 +67,8 @@ const Gaming = () => {
                                 sx={{
                                     typography: "body1",
                                     lineHeight: 1.8,
-                                    textAlign: "justify",
+                                    textAlign: lang === "en" ? "justify" : "right",
+                                    // textAlign: "justify",
                                     marginBottom: "4rem",
                                 }}
                                 gutterBottom

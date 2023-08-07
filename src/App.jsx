@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Home from './Components/Home/Home.jsx';
 import Floater from './Components/Floater/Floater.jsx';
@@ -10,20 +10,23 @@ import About from './Components/About/About.jsx';
 import Team from './Components/Team/Team.jsx';
 import Contact from './Components/Contact/Contact.jsx';
 import Footer from './Components/Footer/Footer.jsx';
+import i18next from "i18next";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 
 function App() {
+  const [lang, setLang] = useState(i18next.language);
+
   return (
     <>
       <div className="overlay"></div>
-      <Navbar />
-      <Home />
+      <Navbar lang={lang} setLang={setLang} />
+      <Home lang={lang} />
       <Floater />
       <About />
       <BitSaudi />
       <BitWallet />
-      <Gaming />
+      <Gaming lang={lang}/>
       <IT_Services />
       <Team />
       <Contact />

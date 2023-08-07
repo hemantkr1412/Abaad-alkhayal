@@ -1,21 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import home from "./assets/home.png";
 import Typography from "@mui/material/Typography";
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
+import { Link } from "react-router-dom";
 import "./Home.css";
 import { useTranslation } from "react-i18next";
 
-const Home = () => {
-	// useEffect(() => {
-	//     AOS.init({
-	//         offset: 10,
-	//         duration: 300,
-	//     });
-	// }, [])
+const Home = ({ lang }) => {
 	const { t } = useTranslation();
+
 	return (
 		<>
 			<div id="home"></div>
@@ -60,7 +54,6 @@ const Home = () => {
 						flexDirection: "column",
 						alignItems: "center",
 						justifyContent: "center",
-						// '@media (maxWidth: 900px)': { xs: 6 }
 					}}>
 					<Box
 						sx={{
@@ -86,9 +79,27 @@ const Home = () => {
 							sx={{
 								textAlign: "justify",
 								color: "white",
+								marginBottom: '2rem'
 							}}>
 							{t("mainSubHeading")}
 						</Typography>
+
+						{lang === "en" ?
+							<Link
+								style={{ marginTop: '1rem' }}
+								className="launchBtn"
+								to="https://drive.google.com/file/d/1j0sPNmKCAPwZ5olYa4zZnZFjqk5-TI6D/view?usp=sharing"
+								target="_blank">
+								{t("homeBtn")}
+							</Link>
+							:
+							<Link
+								className="launchBtn"
+								to="https://drive.google.com/file/d/1ihc7Nzc2lR99R-0su-eQ0bhRQ4ELUnV2/view?usp=sharing"
+								target="_blank">
+								{t("homeBtn")}
+							</Link>
+						}
 					</Box>
 				</Grid>
 				<Grid

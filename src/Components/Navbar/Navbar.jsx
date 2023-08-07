@@ -26,7 +26,7 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 const drawerWidth = 240;
 
-export default function Navbar() {
+export default function Navbar({lang,setLang}) {
 	const { t } = useTranslation();
 	const navItems = [
 		{ label: t("navbar.home"), key: "Home" },
@@ -251,7 +251,7 @@ export default function Navbar() {
 								</Box>
 							</Box>
 						</Box>
-						<LanguageSelect />
+						<LanguageSelect lang={lang} setLang={setLang} />
 					</Toolbar>
 				</AppBar>
 				<Box component="nav">
@@ -277,10 +277,11 @@ export default function Navbar() {
 		</>
 	);
 }
-function LanguageSelect() {
+function LanguageSelect({lang,setLang}) {
 	const [open, setOpen] = React.useState(false);
 	const anchorRef = React.useRef(null);
-	const [lang, setLang] = useState(i18next.language);
+	// const [lang, setLang] = useState(i18next.language);
+
 	const handleLanguageChange = (event, value) => {
 		i18next.changeLanguage(value);
 		setLang(value);
