@@ -23,9 +23,9 @@ function App() {
       <Navbar lang={lang} setLang={setLang} />
       <Home lang={lang} />
       <Floater />
-      <About />
-      <BitSaudi />
-      <BitWallet />
+      <About lang={lang}/>
+      <BitSaudi lang={lang}/>
+      <BitWallet lang={lang}/>
       <Gaming lang={lang}/>
       <IT_Services />
       <Team />

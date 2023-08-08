@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import "./BitSaudi.css";
 import { useTranslation } from "react-i18next";
 
-const BitWallet = () => {
+const BitWallet = ({lang}) => {
 	const { t } = useTranslation();
 	useEffect(() => {
 		AOS.init({
@@ -87,7 +87,7 @@ const BitWallet = () => {
 							sx={{
 								typography: "body1",
 								lineHeight: 1.8,
-								textAlign: "justify",
+								textAlign: lang === "en" ? "justify" : "right",
 								marginBottom: "4rem",
 							}}
 							gutterBottom

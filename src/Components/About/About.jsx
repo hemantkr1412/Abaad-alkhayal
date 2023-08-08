@@ -10,7 +10,7 @@ import aboutImg2 from "./assets/about2.png";
 import "./About.css";
 import { useTranslation } from "react-i18next";
 
-const About = () => {
+const About = ({lang}) => {
 	const { t } = useTranslation();
 	useEffect(() => {
 		AOS.init({
@@ -98,7 +98,7 @@ const About = () => {
 							sx={{
 								typography: "body1",
 								lineHeight: 1.8,
-								textAlign: "justify",
+								textAlign: lang === "en" ? "justify" : "right",
 								marginRight: "0",
 								color: "white",
 							}}
@@ -213,7 +213,7 @@ const About = () => {
 							sx={{
 								typography: "body1",
 								lineHeight: 1.8,
-								textAlign: "justify",
+								textAlign: lang === "en" ? "justify" : "right",
 								marginLeft: "0",
 								color: "white",
 							}}
