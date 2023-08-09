@@ -39,7 +39,12 @@ const Gaming = ({ lang }) => {
                 marginBottom: '6rem',
                 padding: '5rem 0'
             }}>
-                <h1>{t("ourSolutions.gaming.heading")}</h1>
+                <h1
+                    className="gamingHeadMob"
+                    style={{ textAlign: lang === "en" ? "justify" : "right" }}
+                >
+                    {t("ourSolutions.gaming.heading")}
+                </h1>
                 <Grid
                     container
                     spacing={{ xs: 3, md: 3 }}
@@ -48,13 +53,7 @@ const Gaming = ({ lang }) => {
                     <Grid item xs={12} sm={2} md={1} lg={2} sx={{
                         display: { xs: "none", md: "block" }
                     }}></Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={6}
-                        md={5}
-                        lg={4}
-                        id="solutionImgContainer">
+                    <Grid item xs={12} sm={6} md={5} lg={4} id="solutionImgContainer">
                     </Grid>
                     <Grid item xs={12} sm={6} md={5} lg={4}>
                         <Box
@@ -63,6 +62,12 @@ const Gaming = ({ lang }) => {
                                 ml: { xs: 3, md: 0 },
                                 pr: { xs: 3, md: 0 },
                             }}>
+                            <h1
+                                className="gamingHead"
+                                style={{ textAlign: lang === "en" ? "justify" : "right", }}
+                            >
+                                {t("ourSolutions.gaming.heading")}
+                            </h1>
                             <Typography
                                 sx={{
                                     typography: "body1",
@@ -78,12 +83,7 @@ const Gaming = ({ lang }) => {
                             </Typography>
                         </Box>
                     </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={2}
-                        md={1}
-                        lg={2}
+                    <Grid item xs={12} sm={2} md={1} lg={2}
                         sx={{ display: { xs: "none", md: "block" } }}></Grid>
                 </Grid>
             </div>

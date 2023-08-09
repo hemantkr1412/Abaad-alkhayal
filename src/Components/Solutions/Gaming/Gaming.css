@@ -11,7 +11,21 @@
 #gaming {
     height: 6rem;
 }
+.gamingHead{
+    margin-bottom: 2rem;
+}
+.gamingHeadMob{
+    display: none;
+}
 
+@media only screen and (max-width : 600px){
+    .gamingHead{
+        display: none;
+    }
+    .gamingHeadMob{
+        display: block;
+    }
+}
 @media only screen and (max-width : 450px){
     .gamingDiv{
         background-position: -10rem 0 !important;

@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import "./BitSaudi.css";
 import { useTranslation } from "react-i18next";
 
-const BitWallet = ({lang}) => {
+const BitWallet = ({ lang }) => {
 	const { t } = useTranslation();
 	useEffect(() => {
 		AOS.init({
@@ -22,25 +22,11 @@ const BitWallet = ({lang}) => {
 	return (
 		<>
 			<div id="bitwallet"></div>
-			<Grid
-				container
-				spacing={{ xs: 3, md: 3 }}
-				justifyContent="center"
-				className="mission">
-				<Grid
-					item
-					xs={12}
-					sm={2}
-					md={1}
-					lg={2}
+			<Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center" className="mission">
+				<Grid item xs={12} sm={2} md={1} lg={2}
 					sx={{ display: { xs: "none", md: "block" } }}></Grid>
-				<Grid
-					item
-					xs={12}
-					sm={6}
-					md={5}
-					lg={4}
-					id="solutionImgContainer">
+
+				<Grid item xs={12} sm={6} md={5} lg={4} id="solutionImgContainer">
 					<Typography
 						variant="h4"
 						gutterBottom
@@ -79,6 +65,7 @@ const BitWallet = ({lang}) => {
 								fontWeight: "bold",
 								mb: 4,
 								display: { xs: "none", sm: "block" },
+								textAlign: lang === "en" ? "justify" : "right",
 							}}
 							className="solution">
 							{t("ourSolutions.bitWallet.heading")}
@@ -102,13 +89,7 @@ const BitWallet = ({lang}) => {
 						</Link>
 					</Box>
 				</Grid>
-				<Grid
-					item
-					xs={12}
-					sm={2}
-					md={1}
-					lg={2}
-					sx={{ display: { xs: "none", md: "block" } }}></Grid>
+				<Grid item xs={12} sm={2} md={1} lg={2} sx={{ display: { xs: "none", md: "block" } }}></Grid>
 			</Grid>
 		</>
 	);

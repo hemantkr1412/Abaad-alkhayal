@@ -97,6 +97,7 @@ const BitSaudi = ({lang}) => {
 								fontWeight: "bold",
 								mb: 4,
 								display: { xs: "none", sm: "block" },
+								textAlign: lang === "en" ? "justify" : "right",
 							}}
 							className="solution">
 							{t("ourSolutions.bitmemoirSaudi.heading")}

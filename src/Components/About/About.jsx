@@ -88,7 +88,7 @@ const About = ({lang}) => {
 								fontWeight: "bold",
 								mb: 4,
 								display: { xs: "none", sm: "block" },
-								textAlign: "start",
+								textAlign: lang === "en" ? "start" : "right",
 								color: "white",
 							}}
 							className="aboutHead">
@@ -205,6 +205,7 @@ const About = ({lang}) => {
 								mb: 4,
 								display: { xs: "none", sm: "block" },
 								color: "white",
+								textAlign: lang === "en" ? "justify" : "right",
 							}}
 							className="aboutHead">
 							{t("ourMission.heading")}
