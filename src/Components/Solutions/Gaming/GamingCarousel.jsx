@@ -3,8 +3,13 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import './GamingCarousel.css';
+// import { useTranslation } from "
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 const Item = ({ title, img, level, state, setState }) => {
+    const { t } = useTranslation();
+
     const className = `item level${level}`;
     return (
         <CSSTransition
@@ -43,7 +48,11 @@ const Item = ({ title, img, level, state, setState }) => {
     );
 };
 
-const GamingCarousel = ({ items, active }) => {
+const GamingCarousel = ({ items, active, lang, setLang }) => {
+    const { t } = useTranslation();
+
+    // console.log(items)
+
     const [state, setState] = useState({
         items: items,
         active: active,
@@ -52,7 +61,9 @@ const GamingCarousel = ({ items, active }) => {
         visibleCards: 5,
     });
 
-    const itemsArray = [];
+    // useEffect(() => {
+    //     console.log(state)
+    // }, [lang]);
 
     // const handleResize = () => {
     //     if (window.innerWidth >= 600 && window.innerWidth <= 992) {
@@ -74,24 +85,24 @@ const GamingCarousel = ({ items, active }) => {
     //     };
     // }, []);
 
-    const rightClick = () => {
-        const newActive = state.active;
-        setState({
-            ...state,
-            active: (newActive + 1) % state.items.length,
-            direction: 'right'
-        });
-    };
+    // const rightClick = () => {
+    //     const newActive = state.active;
+    //     setState({
+    //         ...state,
+    //         active: (newActive + 1) % state.items.length,
+    //         direction: 'right'
+    //     });
+    // };
 
-    const leftClick = () => {
-        let newActive = state.active;
-        newActive--;
-        setState({
-            ...state,
-            active: newActive < 0 ? state.items.length - 1 : newActive,
-            direction: 'left'
-        });
-    };
+    // const leftClick = () => {
+    //     let newActive = state.active;
+    //     newActive--;
+    //     setState({
+    //         ...state,
+    //         active: newActive < 0 ? state.items.length - 1 : newActive,
+    //         direction: 'left'
+    //     });
+    // };
 
     const generateItems = () => {
         const itemsArray = [];
@@ -113,6 +124,7 @@ const GamingCarousel = ({ items, active }) => {
                     level={level}
                     state={state}
                     setState={setState}
+                    t={t}
                 />
             );
         }

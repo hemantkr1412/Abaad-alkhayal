@@ -26,7 +26,7 @@ function App() {
       <About lang={lang}/>
       <BitSaudi lang={lang}/>
       <BitWallet lang={lang}/>
-      <Gaming lang={lang}/>
+      <Gaming lang={lang} setLang={setLang}/>
       <IT_Services />
       <Team />
       <Contact />

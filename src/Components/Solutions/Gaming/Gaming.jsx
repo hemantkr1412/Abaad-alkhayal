@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -12,7 +12,7 @@ import GamingCarousel from './GamingCarousel';
 import { useTranslation } from "react-i18next";
 import "./Gaming.css";
 
-const Gaming = ({ lang }) => {
+const Gaming = ({ lang,setLang }) => {
     const { t } = useTranslation();
 
     const sliderItems = [
@@ -21,12 +21,11 @@ const Gaming = ({ lang }) => {
         { title: t("ourSolutions.gaming.application.ecommerce"), img: ecommerce },
         { title: t("ourSolutions.gaming.application.gaming"), img: gaming },
         { title: t("ourSolutions.gaming.application.architecture"), img: architecture },
-        // { title: "Entertainment", img: gaming },
-        // { title: "Entertainment", img: gaming },
-        // { title: "Entertainment", img: gaming },
     ];
 
-    // const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // useEffect(() => {
+    //     console.log(`re rendering of gaming`)
+    // }, [lang])
 
     return (
         <>
@@ -73,12 +72,10 @@ const Gaming = ({ lang }) => {
                                     typography: "body1",
                                     lineHeight: 1.8,
                                     textAlign: lang === "en" ? "justify" : "right",
-                                    // textAlign: "justify",
                                     marginBottom: "4rem",
                                 }}
                                 gutterBottom
                                 className="solutionInfo">
-                                {/* {t("copyright")} */}
                                 {t("ourSolutions.gaming.text")}
                             </Typography>
                         </Box>
@@ -88,7 +85,7 @@ const Gaming = ({ lang }) => {
                 </Grid>
             </div>
 
-            <GamingCarousel items={sliderItems} active={0} />
+            <GamingCarousel items={sliderItems} active={0} lang={lang} setLang={setLang} />
         </>
     )
 }
