@@ -3,15 +3,10 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import './GamingCarousel.css';
-// import { useTranslation } from "
 import { useTranslation } from "react-i18next";
 
 
 const Item = ({ title, img, level, state, setState }) => {
-    const { t } = useTranslation();
-
-   
-
     const className = `item level${level}`;
     return (
         <CSSTransition
@@ -19,7 +14,6 @@ const Item = ({ title, img, level, state, setState }) => {
             classNames={state.direction === 'right' ? 'slide' : 'slide-left'}
         >
             <div className={className} onClick={() => {
-                // console.log(`card clicks ${state.active} ${level}`);
                 if (level < 0) {
                     const newActive = state.active;
                     setState({
@@ -50,10 +44,8 @@ const Item = ({ title, img, level, state, setState }) => {
     );
 };
 
-const GamingCarousel = ({ items, active, lang, setLang }) => {
+const GamingCarousel = ({ items, active, lang}) => {
     const { t } = useTranslation();
-
-    console.log(items)
 
     const [state, setState] = useState({
         items: items,
@@ -64,15 +56,8 @@ const GamingCarousel = ({ items, active, lang, setLang }) => {
     });
 
     useEffect(() => {
-        setState({
-            items: items,
-            active: active,
-            direction: '',
-            showArrowIcons: window.innerWidth < 992,
-            visibleCards: 5,
-        });
-        console.log(state);
-    }, [lang]);
+        setState(prevState => ({ ...prevState, items: items, active: active }));
+    }, [items]);
 
     // const handleResize = () => {
     //     if (window.innerWidth >= 600 && window.innerWidth <= 992) {

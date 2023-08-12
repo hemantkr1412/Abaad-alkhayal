@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -22,12 +22,6 @@ const Gaming = ({ lang,setLang }) => {
         { title: t("ourSolutions.gaming.application.gaming"), img: gaming },
         { title: t("ourSolutions.gaming.application.architecture"), img: architecture },
     ];
-
-    // useEffect(() => {
-    //     console.log(`re rendering of gaming`)
-    // }, [lang])
-
-    console.log(sliderItems);
 
     return (
         <>
@@ -87,7 +81,7 @@ const Gaming = ({ lang,setLang }) => {
                 </Grid>
             </div>
 
-            <GamingCarousel items={sliderItems} active={0} lang={lang} setLang={setLang} />
+            <GamingCarousel items={sliderItems} active={0} lang={lang} />
         </>
     )
 }
