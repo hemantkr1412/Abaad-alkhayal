@@ -64,7 +64,14 @@ const GamingCarousel = ({ items, active, lang, setLang }) => {
     });
 
     useEffect(() => {
-        setState(prevState => ({ ...prevState, items: items, active: active }));
+        setState({
+            items: items,
+            active: active,
+            direction: '',
+            showArrowIcons: window.innerWidth < 992,
+            visibleCards: 5,
+        });
+        console.log(state);
     }, [lang]);
 
     // const handleResize = () => {
