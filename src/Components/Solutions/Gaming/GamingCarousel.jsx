@@ -5,10 +5,12 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import './GamingCarousel.css';
 // import { useTranslation } from "
 import { useTranslation } from "react-i18next";
-import i18n from "i18next";
+
 
 const Item = ({ title, img, level, state, setState }) => {
     const { t } = useTranslation();
+
+   
 
     const className = `item level${level}`;
     return (
@@ -51,7 +53,7 @@ const Item = ({ title, img, level, state, setState }) => {
 const GamingCarousel = ({ items, active, lang, setLang }) => {
     const { t } = useTranslation();
 
-    // console.log(items)
+    console.log(items)
 
     const [state, setState] = useState({
         items: items,
@@ -61,9 +63,9 @@ const GamingCarousel = ({ items, active, lang, setLang }) => {
         visibleCards: 5,
     });
 
-    // useEffect(() => {
-    //     console.log(state)
-    // }, [lang]);
+    useEffect(() => {
+        setState(prevState => ({ ...prevState, items: items, active: active }));
+    }, [lang]);
 
     // const handleResize = () => {
     //     if (window.innerWidth >= 600 && window.innerWidth <= 992) {

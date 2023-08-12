@@ -27,6 +27,8 @@ const Gaming = ({ lang,setLang }) => {
     //     console.log(`re rendering of gaming`)
     // }, [lang])
 
+    console.log(sliderItems);
+
     return (
         <>
             <div id="gaming"></div>
