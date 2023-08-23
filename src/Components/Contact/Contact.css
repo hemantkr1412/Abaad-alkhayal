@@ -58,6 +58,23 @@
     /* margin-left: auto !important; */
 }
 
+.calendly-badge-widget {
+    position: relative !important;
+    top: 2rem !important;
+    /* Adjust the top value to move it up or down */
+    left: 0 !important;
+    /* Adjust the left value to move it left or right */
+}
+
+.calendly-badge-content {
+    background-color: var(--primary) !important;
+}
+
+.calendly-overlay {
+    background: rgb(39 39 39 / 69%) !important;
+}
+
+
 /* MEDIA QUERY */
 
 @media only screen and (max-width : 600px) {
@@ -69,9 +86,19 @@
         padding: 0 !important;
     }
 
+    .formOuterDiv {
+        margin-top: 4rem !important;
+    }
+
     .formDiv {
         margin-top: 1rem;
     }
+
+    /* .calendly-overlay .calendly-popup-close {
+        top: 65px !important;
+        left: 18px !important;
+        filter: invert(1);
+    } */
 }
 
 @media only screen and (max-width : 500px) {

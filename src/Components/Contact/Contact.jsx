@@ -15,6 +15,7 @@ import IconButton from "@mui/material/IconButton";
 import CancelIcon from "@mui/icons-material/Cancel";
 import "./Contact.css";
 import { useTranslation } from "react-i18next";
+import { PopupWidget } from "react-calendly";
 
 const Contact = () => {
 	const { t } = useTranslation();
@@ -42,6 +43,7 @@ const Contact = () => {
 	];
 	const [dataAos, setDataAos] = useState("");
 	const [open, setOpen] = React.useState(false);
+	const [openMeet, setOpenMeet] = useState(false);
 	const [inputDetails, setInputDetails] = useState({
 		Name: "",
 		Email: "",
@@ -166,12 +168,22 @@ const Contact = () => {
 								sales@abaadalkhayal.com
 							</a>
 						</Box>
+
 						<Box sx={{ mt: 4 }}>
 							<p>{t("contact.addressHeading")}</p>
 							<p className="contactInfo">
 								{t("contact.address")}
 							</p>
 						</Box>
+
+						<PopupWidget
+							url="https://calendly.com/ankit-oea/30min"
+							rootElement={document.getElementById("contactContainer")}
+							text="Schedule meeting"
+							textColor="#ffffff"
+							color="#00a2ff"
+						// className="custom-popup-widget"
+						/>
 					</Box>
 				</Grid>
 				<Grid

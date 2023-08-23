@@ -41,7 +41,6 @@ const Home = ({ lang }) => {
 						backgroundSize: "contain",
 						backgroundRepeat: "no-repeat",
 						display: { xs: "block", sm: "none" },
-						// '@media (maxWidth: 900px)': { xs: 6 }
 					}}
 					id="homeImg"></Grid>
 				<Grid
@@ -87,14 +86,14 @@ const Home = ({ lang }) => {
 						{lang === "en" ?
 							<Link
 								style={{ marginTop: '1rem' }}
-								className="launchBtn"
+								className="downloadBtn"
 								to="https://drive.google.com/file/d/1j0sPNmKCAPwZ5olYa4zZnZFjqk5-TI6D/view?usp=sharing"
 								target="_blank">
 								{t("homeBtn")}
 							</Link>
 							:
 							<Link
-								className="launchBtn"
+								className="downloadBtn"
 								to="https://drive.google.com/file/d/1ihc7Nzc2lR99R-0su-eQ0bhRQ4ELUnV2/view?usp=sharing"
 								target="_blank">
 								{t("homeBtn")}
@@ -115,7 +114,6 @@ const Home = ({ lang }) => {
 						backgroundSize: "contain",
 						backgroundRepeat: "no-repeat",
 						display: { xs: "none", sm: "block" },
-						// '@media (maxWidth: 900px)': { xs: 6 }
 					}}
 					id="homeImgContainer"></Grid>
 				<Grid
